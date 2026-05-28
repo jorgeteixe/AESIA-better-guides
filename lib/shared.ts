@@ -1,4 +1,4 @@
-export const appName = 'AESIA Better Guides';
+export const appName = 'Guías AESIA';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
