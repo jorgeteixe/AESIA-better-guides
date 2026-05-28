@@ -1,6 +1,11 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://jorgeteixe.github.io/AESIA-better-guides/'),
+};
 
 const inter = Inter({
   subsets: ['latin'],
