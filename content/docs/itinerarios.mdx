@@ -1,0 +1,257 @@
+---
+title: Itinerarios por perfil
+description: Secuencias de lectura ordenadas según tu rol y nivel de riesgo. Convierten el diagnóstico del Punto de partida en un plan de trabajo guía a guía.
+---
+
+El [Punto de partida](/docs/start) te dice **qué eres** (rol y nivel de riesgo). Esta página te dice **qué hacer a continuación**: cada perfil tiene una secuencia de guías ordenada por fases, con lo que aporta cada paso y la obligación a la que responde. Así no lees las 16 guías a ciegas ni en el orden equivocado.
+
+<Callout title="Cómo usar los itinerarios" type="info">
+  Localiza tu perfil más abajo y sigue las fases en orden. Cada paso enlaza con la guía completa. Si aún no sabes tu rol o
+  tu nivel de riesgo, vuelve antes al [Punto de partida](/docs/start). Para la visión completa del corpus y el porqué de
+  cada conexión, el [resumen profundo](/docs/summary) recorre las 16 guías de una vez.
+</Callout>
+
+## Elige tu perfil
+
+<Cards>
+  <Card title="Proveedor de alto riesgo" href="#proveedor-de-alto-riesgo">
+    Desarrollas el sistema y lo pones en el mercado bajo tu nombre. El caso central: te aplica casi todo el corpus.
+  </Card>
+  <Card title="Responsable del despliegue (alto riesgo)" href="#responsable-del-despliegue-de-alto-riesgo">
+    Usas un sistema de alto riesgo de un tercero en un contexto profesional. Menos obligaciones, pero críticas.
+  </Card>
+  <Card title="Administración y sector público" href="#administración-y-sector-público">
+    Como desplegador del sector público sumas la Evaluación de Impacto en los Derechos Fundamentales (EIDF/FRIA).
+  </Card>
+  <Card title="Solo obligaciones de transparencia" href="#solo-obligaciones-de-transparencia">
+    No es alto riesgo, pero interactúa con personas o genera contenido sintético: hay que avisar de que hay IA.
+  </Card>
+  <Card title="Riesgo mínimo" href="#riesgo-mínimo">
+    Sin obligaciones específicas más allá de la alfabetización en IA del personal.
+  </Card>
+</Cards>
+
+## Proveedor de alto riesgo
+
+Es el itinerario más completo: como proveedor asumes la mayoría de obligaciones del Reglamento. El hilo conductor es montar el **expediente de conformidad** y el **sistema de gestión de la calidad** que lo sostiene, y después poblarlos con los controles técnicos.
+
+<Callout title="Tu plazo" type="warning">
+  Si tu finalidad encaja en el **Anexo III** (empleo, biometría, servicios esenciales, etc.), las obligaciones de alto
+  riesgo aplican desde el **2 de agosto de 2026**. Si tu IA es producto o componente de seguridad de un producto regulado
+  (**Anexo I**), el plazo general es el **2 de agosto de 2027**.
+</Callout>
+
+<Steps>
+
+<Step>
+
+### Fase 0 · Confirma clasificación y vocabulario
+
+Antes de implementar, asegúrate de la clasificación y fija los conceptos. La [Guía 01](/docs/guides/01-guia-introductoria-al-reglamento-de-ia) confirma nivel de riesgo y rol; la [Guía 02](/docs/guides/02-guia-practica-y-ejemplos-para-entender-el-reglamento-de-ia) aterriza el vocabulario y los casos de uso. **Concepto clave: la finalidad prevista**, que define el alcance de tus obligaciones.
+
+</Step>
+
+<Step>
+
+### Fase 1 · Diagnóstico inicial
+
+Mide tu punto de partida real con las [checklists oficiales](/docs/resources/checklists-and-examples) y su [manual de uso (Guía 16)](/docs/guides/16-manual-de-checklist-de-guias-de-requisitos). Obtienes una línea base de *gaps* sin tener que leerlo todo a fondo primero.
+
+</Step>
+
+<Step>
+
+### Fase 2 · Decide la vía de conformidad
+
+La [Guía 03](/docs/guides/03-guia-evaluacion-de-conformidad) determina si puedes ir por **autoevaluación** (habitual en el Anexo III) o necesitas un **organismo notificado** (típico del Anexo I). Esta decisión condiciona el resto del proyecto.
+
+</Step>
+
+<Step>
+
+### Fase 3 · Monta la arquitectura de cumplimiento
+
+Las tres guías estructurales, en paralelo:
+
+- [Guía 04 · Sistema de gestión de la calidad](/docs/guides/04-guia-del-sistema-de-gestion-de-la-calidad): el contenedor que orquesta todos los demás requisitos (Art. 17).
+- [Guía 05 · Gestión de riesgos](/docs/guides/05-guia-de-gestion-de-riesgos): define el apetito al riesgo y el ciclo completo (Art. 9).
+- [Guía 15 · Documentación técnica](/docs/guides/15-guia-documentacion-tecnica): usa los 12 bloques del **Anexo IV** como estructura del expediente **desde el día 1**, no al final.
+
+</Step>
+
+<Step>
+
+### Fase 4 · Implementa los controles técnicos
+
+Cada guía cubre un requisito que después documentarás en el expediente:
+
+- [Guía 07 · Datos y gobernanza](/docs/guides/07-guia-de-datos-y-gobernanza-de-datos): calidad de datos y análisis sistemático de sesgos (Art. 10).
+- [Guía 09 · Precisión](/docs/guides/09-guia-de-precision) y [Guía 10 · Solidez](/docs/guides/10-guia-solidez): rendimiento desagregado y estabilidad ante errores y ataques (Art. 15).
+- [Guía 11 · Ciberseguridad](/docs/guides/11-guia-ciberseguridad): amenazas propias de la IA (envenenamiento, evasión, inversión de modelos).
+- [Guía 06 · Supervisión humana](/docs/guides/06-guia-vigilancia-humana): diseño de la vigilancia efectiva y de la interfaz (Art. 14).
+- [Guía 08 · Transparencia](/docs/guides/08-guia-transparencia): instrucciones de uso e información obligatoria para el desplegador (Art. 13).
+- [Guía 12 · Registros](/docs/guides/12-guia-de-registros): trazas automáticas como evidencia de auditoría (Art. 12).
+
+</Step>
+
+<Step>
+
+### Fase 5 · Pre-lanzamiento
+
+Cierra el ciclo antes de poner el sistema en el mercado:
+
+- [Guía 13 · Vigilancia poscomercialización](/docs/guides/13-guia-vigilancia-poscomercializacion): el plan debe existir **antes** del lanzamiento (Art. 72).
+- [Guía 14 · Notificación de incidentes graves](/docs/guides/14-guia-gestion-de-incidentes): procedimiento operativo y plazos (Art. 73).
+- [Guía 03 (revisión)](/docs/guides/03-guia-evaluacion-de-conformidad): declaración UE de conformidad, marcado CE y registro en la base de datos europea.
+
+</Step>
+
+<Step>
+
+### Fase 6 · Operación continua
+
+Mantén vivas las guías [12](/docs/guides/12-guia-de-registros), [13](/docs/guides/13-guia-vigilancia-poscomercializacion) y [14](/docs/guides/14-guia-gestion-de-incidentes) como procesos, y reutiliza la [Guía 16](/docs/guides/16-manual-de-checklist-de-guias-de-requisitos) para auditorías internas tras cambios sustanciales. Recuerda: una **modificación sustancial** puede reabrir la conformidad (vuelta a la Fase 2).
+
+</Step>
+
+</Steps>
+
+## Responsable del despliegue de alto riesgo
+
+Usas un sistema de alto riesgo de un tercero bajo tu autoridad. Tus obligaciones (Art. 26) son menos numerosas que las del proveedor, pero son las que protegen a las personas afectadas en el uso real.
+
+<Callout title="Cuidado: puedes convertirte en proveedor" type="warning">
+  Asumes obligaciones de **proveedor** si pones tu nombre o marca sobre el sistema, haces una **modificación sustancial** o
+  **cambias su finalidad prevista** de modo que pase a ser de alto riesgo. Si es tu caso, sigue el itinerario de
+  [proveedor de alto riesgo](#proveedor-de-alto-riesgo). El plazo del Anexo III es el **2 de agosto de 2026**.
+</Callout>
+
+<Steps>
+
+<Step>
+
+### Fase 0 · Confirma tu rol
+
+La [Guía 01](/docs/guides/01-guia-introductoria-al-reglamento-de-ia) detalla los roles de la cadena de valor y cuándo un desplegador pasa a ser proveedor. Confírmalo antes de repartir tareas.
+
+</Step>
+
+<Step>
+
+### Fase 1 · Exige y aplica las instrucciones de uso
+
+El proveedor debe entregarte instrucciones de uso completas. La [Guía 08 · Transparencia](/docs/guides/08-guia-transparencia) explica qué información tienes derecho a recibir y debes aplicar; usar el sistema **fuera de su finalidad prevista** te expone a asumir obligaciones de proveedor.
+
+</Step>
+
+<Step>
+
+### Fase 2 · Organiza la supervisión humana
+
+La [Guía 06 · Supervisión humana](/docs/guides/06-guia-vigilancia-humana) te ayuda a asignar personas con la competencia y la autoridad necesarias para supervisar el sistema (Art. 14 y Art. 26). No es solo un botón de parada: el supervisor debe entender capacidades y límites.
+
+</Step>
+
+<Step>
+
+### Fase 3 · Controla los datos de entrada
+
+Cuando controlas los datos de entrada, debes asegurar que son pertinentes y representativos para la finalidad prevista. La [Guía 07 · Datos y gobernanza](/docs/guides/07-guia-de-datos-y-gobernanza-de-datos) explica cómo evaluarlos y detectar sesgos.
+
+</Step>
+
+<Step>
+
+### Fase 4 · Vigila el uso real y reacciona
+
+Tienes que monitorizar el comportamiento del sistema y reaccionar ante problemas:
+
+- [Guía 13 · Vigilancia poscomercialización](/docs/guides/13-guia-vigilancia-poscomercializacion): seguimiento de resultados y comunicación con el proveedor.
+- [Guía 12 · Registros](/docs/guides/12-guia-de-registros): conserva los registros que estén bajo tu control.
+- [Guía 14 · Incidentes graves](/docs/guides/14-guia-gestion-de-incidentes): conoce el procedimiento subsidiario; si detectas un riesgo significativo, informa sin demora y, si procede, suspende el uso.
+
+</Step>
+
+</Steps>
+
+## Administración y sector público
+
+Como responsable del despliegue del sector público (y algunas entidades privadas que prestan servicios públicos), sigues el itinerario de desplegador y le **sumas una obligación previa**: la Evaluación de Impacto en los Derechos Fundamentales.
+
+<Callout title="La EIDF/FRIA va antes de desplegar" type="warning">
+  El Art. 27 obliga a los organismos públicos, a entidades privadas que prestan servicios públicos y a ciertos
+  desplegadores del Anexo III a evaluar el impacto sobre los derechos fundamentales **antes** de poner en servicio un
+  sistema de alto riesgo. El corpus de AESIA no dedica una guía específica a la EIDF/FRIA: apóyate en las
+  [fuentes oficiales](/docs/official-sources) y en el texto del [Reglamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/spa).
+</Callout>
+
+<Steps>
+
+<Step>
+
+### Fase 0 · Confirma rol y alcance público
+
+Parte de la [Guía 01](/docs/guides/01-guia-introductoria-al-reglamento-de-ia) para confirmar tu rol y las particularidades del sector público en el calendario y la gobernanza (AESIA como autoridad en España).
+
+</Step>
+
+<Step>
+
+### Fase 1 · Realiza la EIDF/FRIA
+
+Evalúa el impacto sobre los derechos fundamentales **antes** del despliegue (Art. 27). Aunque no haya una guía dedicada, dos del corpus aportan insumos directos: la [Guía 05 · Gestión de riesgos](/docs/guides/05-guia-de-gestion-de-riesgos) (riesgos sobre derechos fundamentales, no solo técnicos) y la [Guía 07 · Datos y gobernanza](/docs/guides/07-guia-de-datos-y-gobernanza-de-datos) (sesgos y representatividad).
+
+</Step>
+
+<Step>
+
+### Fase 2 · Sigue las fases del desplegador
+
+A partir de aquí, el resto del itinerario coincide con el de desplegador: instrucciones de uso ([Guía 08](/docs/guides/08-guia-transparencia)), supervisión humana ([Guía 06](/docs/guides/06-guia-vigilancia-humana)), datos de entrada ([Guía 07](/docs/guides/07-guia-de-datos-y-gobernanza-de-datos)) y vigilancia en producción ([Guías 13](/docs/guides/13-guia-vigilancia-poscomercializacion), [12](/docs/guides/12-guia-de-registros) y [14](/docs/guides/14-guia-gestion-de-incidentes)).
+
+</Step>
+
+</Steps>
+
+## Solo obligaciones de transparencia
+
+Tu sistema **no es de alto riesgo**, pero interactúa con personas (p. ej. un *chatbot*), genera contenido sintético o produce *deepfakes*. El Art. 50 obliga a avisar de que hay IA detrás y a etiquetar el contenido generado.
+
+<Callout title="Tu plazo" type="info">
+  Las obligaciones de transparencia del Art. 50 aplican desde el **2 de agosto de 2026**. Estas obligaciones también se
+  suman, de forma acumulativa, a los sistemas de alto riesgo que generen este tipo de salidas.
+</Callout>
+
+<Steps>
+
+<Step>
+
+### Fase 0 · Confirma que no es alto riesgo
+
+Repasa la clasificación en la [Guía 01](/docs/guides/01-guia-introductoria-al-reglamento-de-ia) y, si tienes dudas con un caso concreto, en la [Guía 02](/docs/guides/02-guia-practica-y-ejemplos-para-entender-el-reglamento-de-ia). Si finalmente es de alto riesgo, cambia al itinerario de [proveedor](#proveedor-de-alto-riesgo) o [desplegador](#responsable-del-despliegue-de-alto-riesgo).
+
+</Step>
+
+<Step>
+
+### Fase 1 · Implementa la transparencia
+
+La [Guía 08 · Transparencia](/docs/guides/08-guia-transparencia) desarrolla cómo informar de la presencia de IA, cómo marcar el contenido sintético y cómo redactar avisos comprensibles para las personas expuestas.
+
+</Step>
+
+</Steps>
+
+## Riesgo mínimo
+
+La mayoría de sistemas de IA caen aquí. **No tienes obligaciones específicas del Reglamento**, más allá de promover la **alfabetización en IA** de tu personal (Art. 4), en vigor desde el **2 de febrero de 2025**.
+
+- La [Guía 01](/docs/guides/01-guia-introductoria-al-reglamento-de-ia) explica el deber de alfabetización y los niveles de riesgo.
+- Revisa la clasificación si **cambias la finalidad del sistema** o el contexto de uso: ese cambio podría reclasificarlo y activar obligaciones.
+
+<Callout title="¿Aún dudas de tu perfil?" type="info">
+  Si los **modelos de uso general (GPAI)** forman parte de tu sistema, tienen un régimen propio (transparencia,
+  documentación técnica, derechos de autor y, para modelos con riesgo sistémico, gestión de riesgos). Según el uso final
+  en que se integren, el sistema resultante puede acabar siendo de alto riesgo: en ese caso, vuelve al
+  [Punto de partida](/docs/start) y sigue el itinerario que te corresponda.
+</Callout>

@@ -26,3 +26,29 @@ Cada pasada debe leerlo antes de trabajar y añadir una entrada nueva al final.
 - Todos los enlaces nuevos usan el mismo esquema raíz-relativo `/docs/...` que el resto del sitio (sin regresión de rutas).
 
 **Siguiente mejora prometedora.** El triaje termina con tarjetas "Tu ruta según el resultado", pero las rutas por caso (p. ej. "alto riesgo · proveedor": 03 → 04 → 05 → 15) viven dispersas entre el resumen y el start. Próxima pasada: crear rutas de lectura reutilizables —una página/sección "Itinerarios" o componentes de ruta por perfil (proveedor de alto riesgo, desplegador, solo transparencia, sector público con FRIA)— enlazadas de forma cruzada y consistente, para convertir el diagnóstico en un plan de trabajo secuenciado por guías.
+
+## 2026-05-29 · Pasada 2 — Itinerarios por perfil: del diagnóstico al plan de trabajo
+
+**Hallazgo.** Recogí la mejora que dejó apuntada la Pasada 1. El `start` (Punto de partida) clasifica al usuario (rol + nivel de riesgo), pero la "ruta según el resultado" eran tarjetas que llevaban a una sola guía o al resumen genérico. No existía ninguna página que tradujera ese diagnóstico en una **secuencia de guías ordenada por perfil**: el orden de lectura del resumen es único (sirve sobre todo al proveedor de alto riesgo) y las pistas por rol estaban dispersas. Faltaba el puente "qué eres → qué hago ahora, guía a guía".
+
+**Cambio (tema único: convertir el diagnóstico en itinerarios accionables).**
+- **Nueva página `content/docs/itinerarios.mdx`** ("Itinerarios por perfil"). Cinco itinerarios secuenciados con `<Steps>` por fases; cada paso enlaza la guía y nombra la obligación/artículo y el plazo aplicable:
+  - **Proveedor de alto riesgo** (Fase 0 clasificación → 1 diagnóstico → 2 vía de conformidad → 3 arquitectura SGC/riesgos/Anexo IV → 4 controles técnicos → 5 pre-lanzamiento → 6 operación continua).
+  - **Responsable del despliegue de alto riesgo** (Art. 26: instrucciones de uso, supervisión humana, datos de entrada, vigilancia en producción), con el aviso de "puedes convertirte en proveedor".
+  - **Administración y sector público** (itinerario de desplegador + **EIDF/FRIA, Art. 27**, antes de desplegar; insumos de las guías 05 y 07).
+  - **Solo obligaciones de transparencia** (Art. 50).
+  - **Riesgo mínimo** (Art. 4) + nota sobre GPAI.
+- `content/docs/meta.json`: añadido `itinerarios` justo tras `start` (segundo en la barra lateral).
+- `content/docs/start.mdx`: las tarjetas "Tu ruta según el resultado" ahora apuntan a las anclas de cada itinerario (antes: guía suelta / resumen). Añadida tarjeta nueva "administración pública" y frase de entrada al nuevo hub.
+- `content/docs/index.mdx`: la sección genérica "Recorridos recomendados" pasa a "Recorridos por perfil", con tarjetas a los itinerarios.
+- `content/docs/introduction.mdx`: nuevo punto 2 en "Cómo recorrerlo" enlazando los itinerarios.
+- `content/docs/summary.mdx`: el "Orden de lectura recomendado" aclara que describe al proveedor de alto riesgo y remite a los itinerarios para otros perfiles.
+
+**Evidencia / verificación.**
+- **Sourcing regulatorio** (WebSearch, EUR-Lex / artificialintelligenceact.eu): confirmado **Art. 26** (obligaciones del responsable del despliegue) y **Art. 27** (EIDF/FRIA para sector público, entidades privadas que prestan servicios públicos y desplegadores del Anexo III 5.b/c, antes de poner en servicio). El resto de afirmaciones se apoya en el contenido ya verificado de `summary.mdx` y `start.mdx`.
+- **Patrón UX** (GOV.UK Design System · *step-by-step navigation*): presentar tareas complejas como una secuencia ordenada —"la información correcta, en el momento correcto, en el orden correcto"— mejora de forma medible la finalización de tareas y la confianza del usuario. Es exactamente lo que aportan los itinerarios por perfil frente a un índice plano.
+- **Build**: `npm run build` correcto; TypeScript pasa; 74 páginas estáticas (incluye `/docs/itinerarios`, su `llms.mdx` y su OG image).
+- **Anclas**: verificado en el HTML generado que los 5 `id` de `<h2>` coinciden exactamente con los anchors usados en los enlaces cruzados, incluidos los acentuados (`administración-y-sector-público`, `riesgo-mínimo`).
+- **Enlaces**: los 22 enlaces internos `/docs/...` que emite la página resuelven a HTML generado (0 rotos); el único externo (EUR-Lex) reutiliza la URL ya validada en `official-sources.mdx`.
+
+**Siguiente mejora prometedora.** Los itinerarios viven solo en MDX. El siguiente salto sería **persistir el resultado del triaje del `start` y resaltar el itinerario correspondiente** (p. ej. enlazar cada resultado del Paso 5 a su ancla, ya hecho a nivel de tarjetas, pero pendiente como recorrido continuo) y, sobre todo, **añadir a cada guía una cabecera estandarizada "De un vistazo"** (artículo, rol responsable, fase del itinerario, dependencias y cuándo usarla), reutilizando los datos del resumen. Eso cerraría el círculo: desde el itinerario entras a una guía que, en su cabecera, te recuerda dónde encaja y a qué guías saltar después. Alternativa de alto valor: habilitar la **búsqueda estática** de Fumadocs (Orama) para que el corpus de ~2 MB sea consultable por palabra clave.
