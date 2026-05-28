@@ -81,16 +81,16 @@ export default function HomePage() {
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
-              href="/docs"
+              href="/docs/start"
               className="rounded-full bg-fd-primary px-6 py-3 text-sm font-medium text-fd-primary-foreground shadow-sm transition hover:opacity-90"
             >
-              Abrir documentación
+              ¿Te aplica el Reglamento? Empieza aquí
             </Link>
             <Link
-              href="/docs/summary"
+              href="/docs"
               className="rounded-full border border-fd-border bg-fd-card px-6 py-3 text-sm font-medium transition hover:bg-fd-accent"
             >
-              Leer el resumen profundo
+              Abrir documentación
             </Link>
           </div>
 
@@ -189,6 +189,19 @@ export default function HomePage() {
                 1
               </span>
               <div>
+                <Link href="/docs/start" className="font-medium underline-offset-4 hover:underline">
+                  Punto de partida
+                </Link>
+                <p className="mt-0.5 text-fd-muted-foreground">
+                  Comprueba en cuatro pasos si el Reglamento te aplica, en qué nivel de riesgo encajas y qué rol ocupas.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-3">
+              <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-fd-primary/10 text-xs font-semibold text-fd-primary">
+                2
+              </span>
+              <div>
                 <Link href="/docs/introduction" className="font-medium underline-offset-4 hover:underline">
                   Introducción
                 </Link>
@@ -199,7 +212,7 @@ export default function HomePage() {
             </li>
             <li className="flex gap-3">
               <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-fd-primary/10 text-xs font-semibold text-fd-primary">
-                2
+                3
               </span>
               <div>
                 <Link href="/docs/summary" className="font-medium underline-offset-4 hover:underline">
@@ -212,7 +225,7 @@ export default function HomePage() {
             </li>
             <li className="flex gap-3">
               <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-fd-primary/10 text-xs font-semibold text-fd-primary">
-                3
+                4
               </span>
               <div>
                 <Link
