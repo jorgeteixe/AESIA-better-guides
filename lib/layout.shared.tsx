@@ -4,9 +4,37 @@ import { appName, gitConfig } from './shared';
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      // JSX supported
-      title: appName,
+      title: (
+        <span className="flex items-center gap-2 font-semibold tracking-tight">
+          <span
+            aria-hidden
+            className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-fd-primary/10 text-fd-primary text-xs font-bold"
+          >
+            AI
+          </span>
+          {appName}
+        </span>
+      ),
     },
+    links: [
+      {
+        text: 'Documentación',
+        url: '/docs',
+        active: 'nested-url',
+      },
+      {
+        text: 'Resumen',
+        url: '/docs/summary',
+      },
+      {
+        text: 'Recursos',
+        url: '/docs/resources/checklists-and-examples',
+      },
+      {
+        text: 'Fuentes oficiales',
+        url: '/docs/official-sources',
+      },
+    ],
     searchToggle: {
       enabled: false,
     },

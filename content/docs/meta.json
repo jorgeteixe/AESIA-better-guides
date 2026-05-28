@@ -3,11 +3,11 @@
   "pages": [
     "index",
     "introduction",
-    "official-sources",
     "summary",
-    "[Guides]",
+    "[Corpus]",
     "guides",
-    "[Resources]",
-    "resources"
+    "[Material de apoyo]",
+    "resources",
+    "official-sources"
   ]
 }
