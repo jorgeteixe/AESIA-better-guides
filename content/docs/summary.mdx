@@ -1,0 +1,370 @@
+---
+title: Deep summary
+description: Cross-guide synthesis of objectives, structure, and major takeaways from the AESIA corpus.
+---
+
+Las 16 guías de AESIA constituyen el material de apoyo práctico más completo publicado en España para navegar el Reglamento Europeo de IA (EU AI Act, Reglamento 2024/1689). Desarrolladas en el marco del piloto español de sandbox regulatorio, no tienen carácter vinculante, pero representan el estado del arte en interpretación práctica de las obligaciones aplicables a sistemas de IA de alto riesgo a diciembre de 2025.
+
+---
+
+## Visión de conjunto
+
+El corpus se divide en tres capas:
+
+- **Conocer** (guías 01–02): marco normativo y glosario ilustrado con casos de uso.
+- **Implementar** (guías 03–15): cada guía cubre un artículo o bloque de artículos del Reglamento y responde a "¿qué debo hacer y cómo?". Incluyen cuestionarios de autoevaluación, plantillas de documentación técnica y referencias a normas ISO/IEC aplicables o en desarrollo.
+- **Autodiagnosticar** (guía 16): manual para usar las checklists operativas que acompañan a cada guía técnica.
+
+El conjunto forma un sistema cerrado: los mismos cinco casos de uso recurrentes (biometría laboral, promoción de personal por IA, predicción de exclusión social, bomba de insulina inteligente, detección de denuncias falsas) se reutilizan en todas las guías técnicas para anclar los requisitos abstractos a situaciones concretas.
+
+---
+
+## Qué persigue cada guía
+
+### Guía 01 — Introducción al Reglamento de IA
+
+- **Objetivo**: Punto de entrada para cualquier organización que empieza a explorar el AI Act.
+- **Qué cubre**:
+  - Estructura del Reglamento: ámbito, exclusiones, definiciones clave.
+  - Gobernanza de supervisión de mercado y autoridades competentes (en España, AESIA).
+  - Niveles de riesgo: inaceptable → alto → transparencia → mínimo.
+  - Roles de la cadena de valor: proveedor, responsable del despliegue, importador, distribuidor, y cuándo uno asume obligaciones del otro.
+  - Particularidades para PYME y *startups* (proporcionalidad).
+  - Obligaciones de alfabetización IA, transparencia y sistemas de alto riesgo.
+  - Calendario de activación de obligaciones (2024–2027).
+- **Takeaways**:
+  - Antes de cualquier otra cosa, hay que determinar en qué nivel de riesgo cae el sistema y qué rol ocupa la organización.
+  - El calendario de obligaciones es escalonado: las restricciones de IA prohibida (inaceptable) son las primeras en aplicar; las de alto riesgo, más tarde.
+  - PYME no quedan exentas, pero hay márgenes de proporcionalidad en implementación.
+- **Cuándo usarla**: Primera lectura obligatoria para cualquier equipo que inicia un proyecto de cumplimiento o quiere situar su sistema en el mapa regulatorio.
+
+---
+
+### Guía 02 — Guía práctica y ejemplos para entender el Reglamento de IA
+
+- **Objetivo**: Hacer aterrizar los conceptos del Reglamento mediante casos de uso hipotéticos y un glosario extendido con ejemplos.
+- **Qué cubre**:
+  - Cinco casos de uso de referencia que se usan a lo largo de todas las guías técnicas.
+  - Glosario de ~22 términos clave del Art. 3 del Reglamento (sistema de IA, finalidad prevista, modificación sustancial, deepfake, GPAI, ciclo de vida, etc.) con ejemplos vinculados a los casos de uso.
+  - Contexto del sandbox español y cómo se relacionan las guías entre sí.
+- **Takeaways**:
+  - "Finalidad prevista" es el concepto más crítico: define el ámbito de obligaciones; cualquier uso fuera de ella puede generar una modificación sustancial que reactiva el proceso de conformidad.
+  - "Modificación sustancial" no es solo un cambio técnico: puede ser un cambio de propósito, de datos de entrada o de contexto de despliegue.
+  - Los modelos GPAI (como los LLMs de propósito general) tienen su propio régimen de obligaciones diferenciado.
+- **Cuándo usarla**: Lectura paralela o inmediatamente posterior a la guía 01; consulta puntual de definiciones durante el trabajo con las guías técnicas.
+
+---
+
+### Guía 03 — Evaluación de conformidad
+
+- **Objetivo**: Explicar cómo demostrar formalmente que un sistema de alto riesgo cumple con el Reglamento antes de ponerlo en el mercado.
+- **Qué cubre**:
+  - Concepto y tipos de evaluación de conformidad (autoevaluación vs. tercero notificado).
+  - Proceso de evaluación en función del tipo de sistema (Anexo I vs. Anexo III del Reglamento).
+  - Qué ocurre ante una modificación sustancial: el proceso puede tener que reiniciarse total o parcialmente.
+  - Instrumentos asociados: declaración UE de conformidad, marcado CE, registro en la base de datos EU.
+  - Referencias: ISO/IEC 17000, prEN XXX AI Conformity Assessment Framework.
+- **Takeaways**:
+  - La mayoría de sistemas de alto riesgo del Anexo III (empleo, educación, servicios esenciales) pueden hacer autoevaluación interna; los del Anexo I (productos regulados tipo médico, maquinaria) requieren organismo notificado.
+  - La evaluación de conformidad no es un evento único: debe repetirse ante cambios significativos.
+  - La declaración UE de conformidad y el marcado CE son los artefactos finales exigibles por las autoridades de vigilancia de mercado.
+- **Cuándo usarla**: Antes de lanzar al mercado; tras cualquier modificación sustancial; cuando se hereda un sistema de un tercero que podría reclasificar el rol de la organización.
+
+---
+
+### Guía 04 — Sistema de gestión de la calidad (SGC)
+
+- **Objetivo**: Guiar la implantación del SGC exigido por el Art. 17 del Reglamento.
+- **Qué cubre**:
+  - Los 13 elementos que debe incorporar el SGC: cumplimiento normativo, diseño y verificación, desarrollo y aseguramiento, prueba y validación, especificaciones técnicas, gestión de datos, gestión de riesgos, vigilancia poscomercialización, notificación de incidentes, comunicación, documentación, gestión de recursos y rendición de cuentas.
+  - Proporcionalidad según el tamaño de la organización.
+  - Consideraciones específicas para entidades financieras y sectores con legislación propia.
+  - Cuestionario de autoevaluación.
+  - Referencia: prEN 18286 AI Quality Management System.
+- **Takeaways**:
+  - El SGC es el "sistema nervioso central" del cumplimiento: integra y orquesta todos los demás requisitos técnicos.
+  - Para una PYME, no requiere un ISO 9001 completo: basta con que los elementos exigidos estén documentados y operativos de forma proporcional.
+  - El marco de rendición de cuentas implica asignar roles claros internamente, no solo tener políticas.
+- **Cuándo usarla**: En paralelo con la guía 05; es el marco organizativo que contiene a los demás requisitos técnicos.
+
+---
+
+### Guía 05 — Sistema de gestión de riesgos
+
+- **Objetivo**: Implementar el sistema de gestión de riesgos exigido por el Art. 9 del Reglamento.
+- **Qué cubre**:
+  - Ciclo completo: apetito al riesgo → contexto del sistema → identificación → análisis y evaluación → respuesta → documentación → comunicación → seguimiento y mejora continua.
+  - Proporcionalidad en la gestión del riesgo.
+  - Pruebas destinadas a verificar que el sistema funciona conforme a su finalidad prevista.
+  - Riesgos específicos: acceso de menores, entidades sujetas a legislación sectorial, vigilancia poscomercialización.
+  - Anexos con catálogo de componentes de sistemas IA, tipos de riesgo habituales, controles e indicadores de efectividad.
+  - Referencias: prEN 18228, ISO/IEC 23894.
+- **Takeaways**:
+  - El "apetito al riesgo" debe definirse explícitamente y documentarse; no es algo que se derive de facto del diseño.
+  - Los riesgos no son solo técnicos: incluyen sesgos, impacto en derechos fundamentales y uso por menores.
+  - El sistema de gestión de riesgos no es estático: debe actualizarse con la experiencia poscomercialización.
+- **Cuándo usarla**: En las fases tempranas de diseño del sistema; revisión obligatoria antes del lanzamiento y tras incidentes o cambios sustanciales.
+
+---
+
+### Guía 06 — Supervisión humana
+
+- **Objetivo**: Implementar los mecanismos de vigilancia humana efectiva exigidos por el Art. 14.
+- **Qué cubre**:
+  - Qué es la vigilancia humana en IA y por qué es necesaria.
+  - Requisitos del Reglamento: diseño para vigilancia efectiva, riesgos sobre derechos fundamentales, tipos de medidas, entendimiento y autonomía del supervisor, particularidades de identificación biométrica.
+  - Medidas concretas: diseño de interfaces humano-máquina (HMI), modelos de gobernanza, técnicas de "error forzado" para concienciación, patrones "human-in-the-loop" vs. "human-on-the-loop".
+  - Referencia: prEN 18229-1 AI Trustworthiness Framework.
+- **Takeaways**:
+  - "Human in the loop" y "human on the loop" tienen implicaciones de diseño muy diferentes: hay que especificarlo en la documentación técnica.
+  - La vigilancia humana no es solo tener un botón de stop: requiere que el operador humano entienda las capacidades y limitaciones del sistema.
+  - El diseño de la interfaz HMI es parte del cumplimiento regulatorio, no solo de la UX.
+- **Cuándo usarla**: Durante el diseño del sistema y al definir los procedimientos operativos para el responsable del despliegue.
+
+---
+
+### Guía 07 — Datos y gobernanza del dato
+
+- **Objetivo**: Cumplir con los requisitos de gobernanza y calidad de datos del Art. 10.
+- **Qué cubre**:
+  - Marco de gobernanza del dato y sus elementos.
+  - Ciclo completo de gestión: recopilación → preparación → disposición → eliminación.
+  - Tratamiento de categorías especiales de datos personales y relación con RGPD.
+  - Detección y corrección de sesgos.
+  - Anexos con dimensiones de calidad del dato, fuentes de sesgo y técnicas de evaluación.
+  - Referencias: ISO/IEC 5259-x, prEN 18229, prEN Quality and governance of datasets.
+- **Takeaways**:
+  - El análisis de sesgos no es opcional ni se hace una sola vez: es una actividad sistemática.
+  - Los datos de entrenamiento, validación y prueba tienen requisitos diferenciados; mezclarlos invalida las métricas.
+  - El uso de categorías especiales de datos para corregir sesgos está contemplado bajo condiciones estrictas.
+- **Cuándo usarla**: Desde el inicio del proyecto y de forma continua durante entrenamiento y reentrenamiento.
+
+---
+
+### Guía 08 — Transparencia y provisión de información a los usuarios
+
+- **Objetivo**: Implementar los requisitos de transparencia del Art. 13 hacia usuarios y responsables del despliegue.
+- **Qué cubre**:
+  - Qué es la transparencia en IA y por qué se exige.
+  - Diseño y desarrollo transparente, instrucciones de uso, capacidades, limitaciones, cambios, vigilancia humana, recursos HW/SW y registros.
+  - Medidas prácticas: lenguaje adaptado, explicaciones contrafactuales, métricas con contexto, gestión de complejidad.
+  - Documentación técnica asociada.
+- **Takeaways**:
+  - Las instrucciones de uso son un requisito del Reglamento, no solo documentación comercial.
+  - Comunicar una métrica global sin contexto no es transparencia suficiente.
+  - La transparencia es hacia el responsable del despliegue y hacia el usuario final.
+- **Cuándo usarla**: Desde el diseño del sistema y antes de su puesta en el mercado.
+
+---
+
+### Guía 09 — Precisión
+
+- **Objetivo**: Cumplir con los requisitos de precisión del Art. 15 del Reglamento.
+- **Qué cubre**:
+  - Qué es la precisión y su relación con el ciclo de vida.
+  - Factores que afectan la precisión: preprocesamiento, overfitting, selección de modelos, incertidumbre.
+  - Evaluación: métricas apropiadas, función objetivo, equidad y robustez.
+  - Garantías: significancia estadística, benchmarks, medidas técnicas.
+  - Artefactos: Model Cards y Dataset Cards.
+- **Takeaways**:
+  - Una métrica global puede ocultar rendimiento muy pobre en subgrupos críticos.
+  - El overfitting puede convertirse en incumplimiento si el sistema no funciona conforme a su finalidad prevista en producción.
+  - Las Model Cards son una forma muy práctica de documentar límites y rendimiento.
+- **Cuándo usarla**: Durante entrenamiento, validación y documentación técnica.
+
+---
+
+### Guía 10 — Solidez
+
+- **Objetivo**: Cumplir con los requisitos de solidez (robustness) del Art. 15.
+- **Qué cubre**:
+  - Comportamiento estable ante variaciones de entrada, errores, ataques o degradación.
+  - Evaluación de solidez: métricas, validación, verificación, eficiencia, monitorización.
+  - Solidez y resistencia a errores.
+  - Redundancia y planes de respaldo.
+  - Sistemas que continúan aprendiendo y gestión de deriva.
+- **Takeaways**:
+  - Los sistemas con aprendizaje continuo son el caso más complejo y requieren mecanismos explícitos frente a la deriva.
+  - La solidez debe monitorizarse continuamente y documentarse en el plan poscomercialización.
+  - Los planes de respaldo deben diseñarse antes del despliegue.
+- **Cuándo usarla**: Durante diseño, pruebas y definición del plan de vigilancia poscomercialización.
+
+---
+
+### Guía 11 — Ciberseguridad
+
+- **Objetivo**: Cumplir con los requisitos de ciberseguridad del Art. 15 para sistemas de alto riesgo.
+- **Qué cubre**:
+  - Amenazas específicas para IA: envenenamiento, evasión, inversión de modelos, inferencia.
+  - Medidas para mantener un nivel consistente de ciberseguridad.
+  - Controles diferenciados para proveedor y responsable del despliegue.
+  - Formación específica en ciberseguridad para IA.
+  - Referencias: ISO/IEC 27001, ISO/IEC 27017, ENISA.
+- **Takeaways**:
+  - Las amenazas de IA no son idénticas a las de software tradicional.
+  - La seguridad incluye proteger datos de entrenamiento y el modelo, no solo infraestructura.
+  - Los controles de acceso deben distinguir uso en producción y modificación del pipeline.
+- **Cuándo usarla**: Desde el diseño de arquitectura y en revisiones antes del despliegue o cambios de infraestructura.
+
+---
+
+### Guía 12 — Registros y archivos de registro generados automáticamente
+
+- **Objetivo**: Implementar el sistema de gestión de registros (logging) exigido por el Art. 12.
+- **Qué cubre**:
+  - Qué es un registro en el contexto del AI Act.
+  - Actores responsables: proveedor y responsable del despliegue.
+  - Contenido general y contenido específico para biometría remota.
+  - Diseño, captura, almacenamiento, acceso, retención y eliminación.
+  - Referencias: ISO 15489-1, ISO/IEC 42001, prEN 18229-1, prEN ISO/IEC 24970.
+- **Takeaways**:
+  - Los registros son la evidencia de auditoría ante autoridades.
+  - No todos los eventos requieren la misma granularidad: hay que diseñar por criticidad.
+  - La retención y la eliminación deben definirse antes del despliegue.
+- **Cuándo usarla**: Durante diseño de arquitectura y al redactar la documentación técnica.
+
+---
+
+### Guía 13 — Plan de vigilancia poscomercialización
+
+- **Objetivo**: Diseñar e implementar el plan de vigilancia poscomercialización exigido por el Art. 72.
+- **Qué cubre**:
+  - Vigilancia continua y periódica.
+  - Informes de incidentes, comunicación, capacitación y flexibilidad del plan.
+  - Conexión con riesgos, registros e incidentes graves.
+  - Anexo con indicadores de vigilancia sobre sistema, infraestructura, acciones de usuario y seguridad.
+- **Takeaways**:
+  - El plan poscomercialización es un proceso operativo, no un documento estático.
+  - La vigilancia continua y la periódica tienen propósitos distintos y complementarios.
+  - Un mal rendimiento en producción puede obligar a actualizar riesgos y conformidad.
+- **Cuándo usarla**: Antes del despliegue y durante la operación continua.
+
+---
+
+### Guía 14 — Notificación de incidentes graves
+
+- **Objetivo**: Cumplir con el procedimiento de notificación de incidentes graves del Art. 73.
+- **Qué cubre**:
+  - Qué es un incidente grave.
+  - Obligaciones del proveedor y procedimiento subsidiario del responsable del despliegue.
+  - Papel de las autoridades de vigilancia de mercado.
+  - Integración en el SGC y medidas prácticas para responder a tiempo.
+- **Takeaways**:
+  - La notificación recae principalmente sobre el proveedor, pero el desplegador debe conocer el procedimiento subsidiario.
+  - Los plazos son estrictos y deben estar operativizados antes de que ocurra un incidente.
+  - No todo problema operativo es un incidente grave: hay que conocer el umbral regulatorio.
+- **Cuándo usarla**: Al diseñar procesos operativos y como consulta inmediata ante eventos potencialmente graves.
+
+---
+
+### Guía 15 — Documentación técnica
+
+- **Objetivo**: Explicar qué debe contener la documentación técnica exigida por el Anexo IV del Reglamento y cómo conservarla.
+- **Qué cubre**:
+  - Qué es la documentación técnica para IA de alto riesgo.
+  - Elaboración, conservación y actualización.
+  - Los 12 bloques exigidos: descripción del sistema, procesos, seguimiento, riesgos, vigilancia humana, datos de entrada, rendimiento, gestión de riesgos, control de cambios, normas armonizadas, declaración de conformidad, vigilancia poscomercialización.
+  - Referencias: ISO/IEC 42001, ISO/IEC 23894-2, ISO/IEC 24027.
+- **Takeaways**:
+  - La documentación técnica es el artefacto clave ante inspecciones o incidentes.
+  - Debe mantenerse actualizada durante todo el ciclo de vida del sistema.
+  - Los 12 bloques del Anexo IV consolidan y conectan los requisitos técnicos de las demás guías.
+- **Cuándo usarla**: Como checklist permanente durante el desarrollo y como plantilla del expediente de conformidad.
+
+---
+
+### Guía 16 — Manual de checklist de guías de requisitos
+
+- **Objetivo**: Explicar cómo usar las checklists que acompañan a cada guía técnica para autodiagnóstico y autoevaluación.
+- **Qué cubre**:
+  - Contexto del sandbox español y sus cinco fases.
+  - Estructura de la herramienta: pestañas informativas y operativas.
+  - Distinción entre medidas guía y medidas adicionales.
+  - Papel del diagnóstico para establecer la línea base de cumplimiento.
+- **Takeaways**:
+  - Las checklists no son autosuficientes: deben leerse junto con la guía técnica correspondiente.
+  - Las medidas adicionales son clave para contextos sectoriales o más exigentes.
+  - La autoevaluación estructurada acelera la generación de evidencias de cumplimiento.
+- **Cuándo usarla**: En diagnóstico inicial, revisiones periódicas y auditorías internas.
+
+---
+
+## Patrones transversales
+
+**1. Ciclo de vida completo como eje rector**
+Todos los requisitos técnicos se aplican a lo largo de todo el ciclo de vida del sistema: diseño, desarrollo, prueba, despliegue y operación poscomercialización.
+
+**2. Proporcionalidad explícita**
+Las guías reconocen de forma sistemática que una PYME no puede implementar los mismos procesos que una gran corporación. El principio de proporcionalidad aparece una y otra vez.
+
+**3. Documentación como evidencia de cumplimiento**
+Cada guía técnica incluye o presupone artefactos documentales concretos. El cumplimiento sin documentación, a efectos regulatorios, prácticamente no existe.
+
+**4. El SGC como contenedor**
+La guía 04 integra formalmente riesgos, datos, registros, post-market e incidentes. No son silos independientes.
+
+**5. Autoevaluación como mecanismo de arranque**
+Las guías están pensadas para ser operativizadas mediante cuestionarios y checklists, no solo leídas.
+
+**6. Normas ISO/IEC como estado del arte**
+Las guías citan sistemáticamente estándares técnicos en desarrollo o aún no armonizados. Son una brújula práctica, pero el paisaje puede evolucionar.
+
+**7. Casos de uso recurrentes como hilo conductor**
+Los ejemplos reutilizados a lo largo del corpus facilitan una lectura acumulativa y coherente.
+
+**8. Distinción proveedor / responsable del despliegue**
+Es uno de los cortes más importantes de todo el corpus. Muchas obligaciones cambian según el rol.
+
+**9. Intersección con otros marcos regulatorios**
+RGPD, seguridad, normativa sectorial y gobierno corporativo aparecen integrados de forma recurrente.
+
+---
+
+## Takeaways prácticos
+
+- **Empieza por clasificar, no por implementar.** Antes de tocar una guía técnica, aclara si el sistema es de alto riesgo y cuál es tu rol.
+- **La finalidad prevista manda.** Define para qué está diseñado el sistema; salirte de ahí puede reabrir la conformidad.
+- **El SGC es el proyecto de cumplimiento.** No es un PDF: es el sistema operativo interno del cumplimiento.
+- **La precisión sin desagregación no sirve.** Reportar solo una métrica global suele ser insuficiente.
+- **Los logs son el seguro ante inspecciones.** Diseña registros desde arquitectura, no al final.
+- **El plan poscomercialización debe existir antes del lanzamiento.** Igual que el procedimiento de incidentes graves.
+- **Las checklists son el acelerador inicial.** Permiten ver gaps rápido sin tener que leerlo todo a fondo primero.
+- **Habrá que revisar implementaciones cuando maduren los estándares armonizados.** Las guías son una base fortísima, pero no el último estado posible del marco técnico.
+
+---
+
+## Cómo usar estas guías en un proyecto real
+
+### Orden recomendado de lectura y uso
+
+**Fase 0 — Diagnóstico inicial (días 1–3)**
+1. **Guía 01**: Clasifica el sistema y el rol de tu organización.
+2. **Guía 02**: Aclara el vocabulario y los casos de uso.
+3. **Guía 16**: Ejecuta un primer diagnóstico con las checklists.
+
+**Fase 1 — Decisión de conformidad (semana 1–2)**
+4. **Guía 03**: Determina si necesitas autoevaluación o tercero notificado.
+
+**Fase 2 — Arquitectura del cumplimiento (semanas 2–4)**
+5. **Guía 04**: Diseña el SGC.
+6. **Guía 05**: Implementa el sistema de gestión de riesgos.
+7. **Guía 15**: Usa el Anexo IV como estructura de la documentación técnica desde el día 1.
+
+**Fase 3 — Implementación técnica**
+8. **Guía 07**: Gobernanza de datos y sesgos.
+9. **Guía 09** + **Guía 10**: Precisión y solidez.
+10. **Guía 11**: Ciberseguridad.
+11. **Guía 06**: Supervisión humana.
+12. **Guía 08**: Transparencia e instrucciones de uso.
+13. **Guía 12**: Registros y trazabilidad.
+
+**Fase 4 — Pre-lanzamiento**
+14. **Guía 13**: Valida el plan de vigilancia poscomercialización.
+15. **Guía 14**: Formaliza el proceso de incidentes graves.
+16. **Guía 03** de nuevo: cierra el expediente de conformidad.
+
+**Fase 5 — Operación continua**
+- Mantén vivas las guías 12, 13 y 14 como procesos operativos.
+- Reutiliza la guía 16 para auditorías internas periódicas o tras cambios sustanciales.
+
+> **Nota práctica**: si tuvieras que priorizar pocas guías por impacto inmediato, las más estructurales son la 04, la 05 y la 15. Sobre esa base se apoyan casi todas las demás.

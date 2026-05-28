@@ -1,0 +1,341 @@
+---
+title: "16 Manual de checklist de guías de requisitos"
+description: "Guía de uso de las hojas de control y validación técnica."
+---
+
+## Manual de checklist de guías de requisitos
+Reglamento Europeo de Inteligencia Artificial
+
+Fecha de versión: 10 de diciembre de 2025
+
+## Contenido general
+
+1.  Contexto
+2.  Introducción
+3.  Estructura de la herramienta de checklist
+4.  Conclusión
+
+## Índice detallado
+
+1.  Contexto
+    1.1 Fase de diagnóstico
+2.  Introducción
+3.  Estructura de la herramienta de checklist
+    3.1 Portada [Informativa]
+    3.2 Intro [Informativa]
+    3.3 Artículo RIA [Informativa]
+    3.4 Medidas Guías (MG) [Informativa]
+    3.5 Relación MG-Apart. [Informativa]
+    3.6 Autoeval MG. [Operativa]
+    3.7 Medidas Adicionales (MA). [Operativa]
+    3.8 Relación MA-Apart. [Operativa]
+    3.9 Autoeval MA. [Operativa]
+4.  Conclusión
+
+## 1. Contexto
+
+Este manual ha sido desarrollado en el marco del desarrollo del piloto español de sandbox regulatorio de IA, en colaboración entre los participantes, asistencias técnicas, potenciales autoridades nacionales competentes y el grupo asesor de expertos del sandbox.
+
+El manual tiene como objetivo servir de apoyo introductorio a la normativa europea de Inteligencia Artificial y sus obligaciones aplicables. Si bien **no tiene carácter vinculante ni sustituye ni desarrolla la normativa aplicable**, proporciona **recomendaciones prácticas** alineadas con los requisitos regulatorios a la espera de que se aprueben las normas armonizadas de aplicación para todos los estados miembros.
+
+El presente documento está sujeto a un **proceso permanente de evaluación y revisión**, con actualizaciones periódicas conforme al desarrollo de los estándares y las distintas directrices publicadas desde la Comisión Europea, y será actualizada una vez se apruebe el Ómnibus digital que modifica el Reglamento de Inteligencia Artificial.
+
+Los sandboxes regulatorios desempeñan un papel clave en la experimentación y validación de marcos normativos, permitiendo a las entidades participantes desarrollar e implementar soluciones innovadoras en un entorno controlado y supervisado. Este enfoque facilita la detección temprana de riesgos, la adaptación ágil a los requisitos regulatorios y la generación de conocimiento práctico para la mejora continua de la regulación.
+
+En el caso concreto del sandbox español, la iniciativa es un entorno de pruebas teórico que promueve el desarrollo y uso de una IA responsable, centrándose en la formación, acompañamiento y asesoramiento para el cumplimiento de las obligaciones del Reglamento por parte de entidades que desarrollan sistemas de inteligencia artificial de alto riesgo, en el contexto del Reglamento Europeo de IA (REGLAMENTO (UE) 2024/1689 DEL PARLAMENTO EUROPEO Y DEL CONSEJO -en adelante “RIA”-), e incluyendo una simulación de evaluación de conformidad.
+
+Este sandbox persigue los objetivos que se detallan a continuación:
+
+*   Aportar claridad sobre los requisitos establecidos en el Reglamento.
+*   Evaluar el impacto del Reglamento y sus obligaciones en un entorno controlado.
+*   Validar la aplicabilidad de las guías técnicas de requisitos y el resto de material puesto a disposición de las entidades participantes.
+*   Transferir conocimiento sobre el cumplimiento del Reglamento a entidades que desarrollan soluciones de IA.
+*   Fomentar el desarrollo de sistemas de IA innovadores y confiables.
+*   Aumentar las capacidades y el conocimiento en materia de supervisión de Inteligencia Artificial, que luego será reutilizable por la Agencia Española de Supervisión de Inteligencia Artificial (AESIA).
+*   Influir en el desarrollo de los actos de ejecución y los procesos de estandarización europeos del Reglamento.
+*   Convertir a España en referente del desarrollo de IA responsable en la UE y en el mundo.
+
+Para todo ello, el sandbox se ha llevado a cabo a lo largo de diferentes fases.
+
+**Fases del Sandbox:**
+
+*   **Fase I:** Formación
+*   **Fase II:** Diagnóstico y Plan de Adaptación
+*   **Fase III:** Implementación del Plan de Adaptación
+*   **Fase IV:** Autoevaluación
+*   **Fase V:** Monitorización poscomercialización
+
+**Actividades Transversales:**
+
+*   Actualización de Guías para cumplimiento de requisitos
+*   Asesoramiento
+*   Seguimiento
+
+### 1.1 Fase de diagnóstico
+
+La fase de diagnóstico tiene **dos objetivos**:
+
+*   Que las entidades realicen un **autodiagnóstico** de su sistema, conforme a los requisitos del RIA, a partir de las medidas propuestas para la facilitación de su cumplimiento. Tras este autodiagnóstico cada entidad conocerá la brecha teórica que le queda para el cumplimiento del RIA.
+*   Diseñar el Plan de Adaptación (PDA) que permitirá **planificar** la implementación de las medidas necesarias para dicho cumplimiento, y que será ejecutado en una fase posterior.
+
+Para llevar a cabo esta fase de diagnóstico se ha diseñado una herramienta de **checklist** que permite que las entidades puedan cumplir los objetivos descritos:
+
+*   **Autodiagnosticando** su cumplimiento del RIA de **manera sencilla**, pudiendo además **extraer indicadores** sobre el **grado de avance** del mismo y **conclusiones** acerca del estado de sus sistemas en el inicio del proceso.
+*   **Diseñando** un **Plan de Adaptación (PDA)** que consiste en el plan de trabajo que cada entidad ejecutará para implementar las medidas que le lleven al cumplimiento del RIA.
+
+Existe una herramienta checklist para cada uno de los 12 requisitos sobre los cuales es necesario realizar el diagnóstico: sistema de gestión de la calidad, sistema de gestión de riesgos, supervisión humana, datos y gobernanza de datos, transparencia, precisión, solidez, ciberseguridad, registros, documentación técnica, vigilancia poscomercialización y gestión de incidentes graves.
+
+## 2. Introducción
+
+Estas **checklists** han sido testadas con éxito en el **sandbox**, pero su uso no está restringido al mismo, pudiendo ser utilizadas por cualquier entidad para conseguir los objetivos mencionados anteriormente: llevar a cabo un autodiagnóstico del cumplimiento de los requisitos establecidos por el Reglamento por parte de sus sistemas de IA de alto riesgo, y diseñar un plan de adaptación de sus sistemas a los requisitos establecidos por el mismo.
+
+El uso de esta herramienta es sencillo e intuitivo y, además, está soportado por las guías de requisitos que la acompañan y en las que se detalla cada una de las medidas propuestas y la razón de su elección para cumplir cada uno de los requisitos del RIA para sistemas IA de alto riesgo.
+
+## 3. Estructura de la herramienta de checklist
+
+Dicha herramienta es un documento Excel que tiene la misma estructura para todos los requisitos. Se compone de **9 pestañas**, **5 de ellas informativas** con instrucciones de uso e información de contexto, y otras **4 pestañas operativas** en las que se completa la información requerida. Para que su uso esté alineado con el procedimiento operativo de esta fase, **se recomienda** abordar las pestañas en el orden en el que aparecen en la propia herramienta.
+
+**Pestañas de la herramienta:**
+
+*   Portada
+*   Intro
+*   Artículo RIA
+*   Medidas guías (MG)
+*   Relación MG-Apart.
+*   Autoeval MG
+*   Medidas Adicionales (MA)
+*   Relación MA-Apart.
+*   Autoeval MA
+
+A continuación, se describe la información y funcionalidad de cada una de las pestañas, indicando entre corchetes la naturaleza de la misma (informativa u operativa).
+
+### 3.1 Portada [Informativa]
+
+Contiene el recordatorio de confidencialidad obligatorio para la SEDIA (Secretaría de Estado de Digitalización e Inteligencia Artificial) y todas las entidades participantes en el sandbox, que incluye el uso y distribución de esta checklist.
+
+**EJEMPLO DE PORTADA DE LA CHECKLIST DEL REQUISITO DE TRANSPARENCIA**
+
+### 3.2 Intro [Informativa]
+
+Describe de manera resumida los pasos y lo que permite realizar la herramienta.
+
+**Diagrama de flujo de autoevaluación:**
+
+*   **Recorrer todos los apartados del artículo, autoevaluando el nivel de madurez** que en el sistema tienen las medidas recogidas en las guías que potencialmente ayudan al cumplimiento del RIA.
+*   **Aportar medidas adicionales para el cumplimiento de cada apartado del artículo.** Dichas medidas serán evaluadas por SEDIA. En caso de considerarse adecuadas serán incorporadas a las guías.
+*   **Indicar en qué apartados del artículo aplican las medidas adicionales** aportadas en el paso anterior, e indicando cual es el grado de madurez de las mismas en el sistema.
+
+*En todos los pasos las entidades podrán recurrir al asesoramiento de su mentor.*
+
+### 3.3 Artículo RIA [Informativa]
+
+Muestra los apartados del artículo sobre los cuales la entidad va a hacer el autodiagnóstico. El campo "Descripción resumida" es un resumen de cada apartado para facilitar su contextualización en pestañas posteriores.
+
+**EJEMPLO DE LA CHECKLIST DE TRANSPARENCIA**
+**(EL CONTENIDO DE LA IMAGEN ES PARTE DE LA EXISTENTE EN LA HERRAMIENTA)**
+
+| Apartado | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Descripción resumida           |
+| :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------- |
+| 13.1     | Los sistemas de IA de alto riesgo se diseñarán y desarrollarán de un modo que se garantice que funcionan con un nivel de transparencia suficiente para que los responsables del despliegue interpreten y usen correctamente sus resultados de salida. Se garantizará un tipo y un nivel de transparencia adecuados para que el proveedor y el responsable del despliegue cumplan las obligaciones pertinentes previstas en la sección 3.                                                                                                | Diseño y desarrollo            |
+| 13.2     | Los sistemas de IA de alto riesgo irán acompañados de las instrucciones de uso correspondientes en un formato digital o de otro tipo adecuado, las cuales incluirán información concisa, completa, correcta y clara que sea pertinente, accesible y comprensible para los responsables del despliegue.                                                                                                                                                                                                                               | Instrucciones de uso           |
+| 13.3     | Las instrucciones de uso contendrán al menos la siguiente información:                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Información específica         |
+| 13.3.a   | La identidad y los datos de contacto del proveedor y, en su caso, de su representante autorizado;                                                                                                                                                                                                                                                                                                                                                                                                                                  | Información específica. Contacto |
+| 13.3.b   | Las características, capacidades y limitaciones del funcionamiento del sistema de IA de alto riesgo, con inclusión de:                                                                                                                                                                                                                                                                                                                                                                                                                 | Información específica. Características |
+| 13.3.b.i | Su finalidad prevista, incluido el entorno geográfico, funcional o de comportamiento específico en el que se pretende utilizar el sistema de IA de alto riesgo                                                                                                                                                                                                                                                                                                                                                                  | Información específica. Características. Finalidad |
+| 13.3.b.ii | El nivel de precisión (incluidos los parámetros para medirla), solidez y ciberseguridad mencionado en el artículo 15 con respecto al cual se haya probado y validado el sistema de IA de alto riesgo y que puede esperarse, así como cualquier circunstancia conocida y previsible que pueda afectar al nivel de precisión, solidez y ciberseguridad esperado                                                                                                                                                                         | Información específica. Características. Nivel de precisión |
+
+### 3.4 Medidas Guías (MG) [Informativa]
+
+Expone las medidas explicadas con detalle, recogidas en la correspondiente guía, las cuales:
+
+*   Han sido recogidas de buenas prácticas de la industria del software, y han sido validadas por entidades nacionales y europeas.
+*   Se espera que sean de mayor detalle que los estándares que se espera que sean liberados por la CE, ya que estos estarán más encaminados a describir QUÉ hay que hacer para cumplir el RIA, mientras que las medidas descritas en las guías (y en las checklists) dan pautas sobre CÓMO llegar al cumplimiento de cada requisito (o artículo).
+*   **No todas** tienen por qué aplicar en cualquier sistema atendiendo a las características del mismo.
+*   En base a la experiencia, se ha detectado que pueden existir medidas adicionales que las empresas ya están utilizando en sus sistemas y que sean igualmente válidas para el cumplimiento del RIA. Por eso en la pestaña "Medidas Adicionales (MA)", descrita más adelante en este documento, podrán ser agregadas.
+
+Adicionalmente, para cada medida se han definido unas **cuestiones orientativas** con el fin de contextualizarla, de manera que la respuesta a las mismas pueda dar una idea de si el sistema ya cumple o no la medida en cuestión.
+
+**EJEMPLO DE LA CHECKLIST DE TRANSPARENCIA**
+**(EL CONTENIDO DE LA IMAGEN ES PARTE DE LA EXISTENTE EN LA HERRAMIENTA)**
+
+| IDMedida | Descripción                               | Cuestiones orientativas para contextualizar las medidas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| :------- | :---------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MG01     | Proporcionar contacto con el proveedor    | * ¿El sistema va acompañado de un canal que permita la gestión de peticiones e incidencias de manera online?<br />* ¿El modelo de gobierno asociado al sistema tiene dentro de su estructura organizativa un punto de contacto claro del proveedor a disposición de los responsables del despliegue?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| MG02     | Atender al dominio de negocio             | * ¿El sistema cubre los requisitos relacionados con la transparencia que aplican a los casos de uso soportados por el mismo?<br />* ¿El sistema proporciona información detallada de su alcance funcional, especificando también los posibles riesgos por usos no previstos del mismo?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| MG03     | Asegurar el objetivo funcional del sistema | * ¿El sistema proporciona información acerca de las circunstancias previsibles donde pudieran darse usos del mismo con fines distintos para el que fue concebido?<br />* ¿El sistema va acompañado de un plan de riesgos para dichos usos?<br />* ¿El sistema tiene asociado un procedimiento para poder supervisar que dichos usos no se producen durante el funcionamiento del sistema?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| MG04     | Transparencia sobre los datos utilizados  | * ¿El sistema identifica las fuentes de datos utilizadas tanto para en su aprendizaje como en su utilización, proporcionando además el significado de dichas fuentes y datos, su utilidad y la implicación en el uso de los mismos?<br />* ¿El sistema va acompañado de herramientas que permitan un detallado análisis exploratorio de datos (EDA) de dichas fuentes, para conocer su esencia, su metainformación asociada, los valores críticos o atípicos de los mismos, etc.?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| MG05     | Detallar de lo más global a lo más particular | * ¿El sistema proporciona mecanismos técnicos que facilitan el entendimiento de su mecanismo de razonamiento global?<br />* ¿El sistema proporciona mecanismos técnicos que facilitan el entendimiento de sus acciones sobre un subconjunto de información con características parecidas para garantizar la homogeneidad de su funcionamiento?<br />* ¿El sistema proporciona mecanismos técnicos que facilitan el entendimiento de cada una de dichas acciones?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| MG06     | Adaptar el lenguaje                       | * ¿El sistema proporciona mecanismos que facilitan el entendimiento de su razonamiento global bajo un lenguaje entendible por todos los actores que interactúan con sistema a lo largo de todo su ciclo de vida?<br />* ¿El sistema proporciona mecanismos técnicos que facilitan el entendimiento de sus acciones sobre un subconjunto de información con características parecidas para garantizar la homogeneidad de su funcionamiento, en un lenguaje entendible por todos los actores que interactúan con el sistema a lo largo de todo su ciclo de vida?<br />* ¿El sistema proporciona mecanismos técnicos que facilitan el entendimiento de sus acciones individuales del sistema de IA en un lenguaje entendible por todos los actores que interactúan con el sistema a lo largo de todo su ciclo de vida? |
+
+### 3.5 Relación MG-Apart. [Informativa]
+
+Resume de manera ejecutiva la potencial aplicación de las medidas expuestas en la pestaña anterior (Medidas guías (MG)) a cada uno de los apartados del artículo. Se trata de un resumen visual de la relación entre las medidas propuestas y todos los apartados del artículo.
+
+**EJEMPLO DE LA CHECKLIST DE TRANSPARENCIA**
+
+| Apartados                                           | Medidas                                                                                                                                                                                                     |
+| :-------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                     | MG1 MG2 MG3 MG4 MG5 MG6 MG7 MG8 MG9 MG10 MG11 MG12 MG13 MG14 MG15 MG16 |
+| 13.1. Diseño y desarrollo                           | X   X   X   X   X   X   X   X                                                                                                                                                                           |
+| 13.2. Instrucciones de uso                          | X                                                                                                                                                                                                       |
+| 13.3. Información específica                        | X                                                                                                                                                                                                       |
+| 13.3.a. Información específica. Contacto            | X                                                                                                                                                                                                       |
+| 13.3.b. Información específica. Características     | X   X   X   X   X   X                                                                                                                                                                                 |
+| 13.3.b.i. Información específica. Características. Finalidad | X   X   X   X   X   X   X   X                                                                                                                                                                           |
+| 13.3.b.ii. Información específica. Características. Nivel de precisión | X   X   X   X   X                                                                                                                                                                                       |
+| 13.3.b.iii. Información específica. Características. Riesgos por usos no previstos | X   X   X   X   X                                                                                                                                                                                       |
+| 13.3.b.iv. Información específica. Características. Explicación de sus resultados de salida | X   X   X   X   X                                                                                                                                                                                       |
+| 13.3.b.v. Información específica. Características. Impacto en personas y colectivos | X   X   X   X   X                                                                                                                                                                                       |
+| 13.3.b.vi. Información específica. Características. Datos de entrada | X   X   X   X   X   X                                                                                                                                                                                 |
+| 13.3.b.vii. Información específica. Características. Información de salida | X   X   X   X   X                                                                                                                                                                                       |
+| 13.3.c. Información específica. Cambios             | X                                                                                                                                                                                                       |
+| 13.3.d. Información específica. Vigilancia humana   | X   X                                                                                                                                                                                                     |
+| 13.3.e. Información específica. Recursos HW/SW y mantenimiento | X                                                                                                                                                                                                       |
+| 13.3.f. Información específica. Archivos de registro | X                                                                                                                                                                                                       |
+
+### 3.6 Autoeval MG. [Operativa]
+
+Esta es la primera pestaña operativa de la herramienta, que permitirá identificar tanto el nivel de madurez de implantación de la medida propuesta en el sistema, como el nivel de dificultad percibido para llevarla a cabo. De la cumplimentación de esta pestaña va a surgir el diseño del Plan de Adaptación mencionado anteriormente, que será completado con plazos y esfuerzos, y que constituirá la herramienta de planificación para la fase posterior.
+
+Esta pestaña aparece **pre-informada** con una fila por cada una de las relaciones descritas entre medidas y subapartados del artículo.
+
+**EJEMPLO DE LA CHECKLIST DE TRANSPARENCIA**
+**(EL CONTENIDO DE LA IMAGEN ES PARTE DE LA EXISTENTE EN LA HERRAMIENTA)**
+
+| Apartado articulado | Breve descripción | IDMedida | Descripción medida                      | Nivel de dificultad percibido | Nivel de madurez | Estado Diagnóstico  | Plan de adaptación  |
+| :------------------ | :---------------- | :------- | :-------------------------------------- | :-------------------------- | :--------------- | :------------------ | :------------------ |
+| 13.1.               | Diseño y desarrollo | MG02     | Atender al dominio de negocio           |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG03     | Asegurar el objetivo funcional del sistema |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG04     | Transparencia sobre los datos utilizados |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG05     | Detallar de lo más global a lo más particular |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG06     | Adaptar el lenguaje                     |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG07     | Gestionar la complejidad                |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG08     | Utilizar métricas integradas en el ciclo de vida del sistema |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG09     | Aplicar prudencia                       |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG10     | Usar causalidad, minimizar correlaciones |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+| 13.1.               | Diseño y desarrollo | MG11     | Utilizar contrafactualidad              |                             |                  | 00. Pdte diagnóstico | 00. Pdte diagnóstico |
+
+Si además la entidad considera que alguna medida puede servir para ser aplicada a algún apartado adicional, podrá indicarlo al final de las filas pre-informadas. Para cada relación se **han de cumplimentar únicamente dos columnas**:
+
+*   **Nivel de dificultad percibido**, indicando cuál es la dificultad que la entidad entiende que la aplicación de dicha medida tendría en su sistema para ese apartado, en base a los siguientes valores cualitativos:
+    *   00. Alto
+    *   01. Medio
+    *   02. Bajo
+*   **Nivel de madurez**, indicando cuál es el nivel de madurez de dicha medida en su sistema para el apartado indicado, utilizando los siguientes valores en función del estado de su documentación e implementación en el sistema:
+    *   L1. No documentada ni implementada
+    *   L2. Documentación en curso y no implementada
+    *   L3. Documentada y no implementada
+    *   L4. Documentada e Implementación en curso
+    *   L5. Documentada e Implementada
+    *   L6. No documentada e Implementada
+    *   L7. Documentación en curso e Implementada
+    *   L8. Medida no necesaria, en caso de que la medida propuesta se considera que no es necesaria para el cumplimiento del apartado ya que, como se ha indicado anteriormente, no todas las medidas pueden tener que aplicar a todos los tipos de sistemas inteligentes.
+
+Al seleccionar cualquiera de los anteriores valores del Nivel de madurez, automáticamente:
+
+*   La columna **Estado Diagnóstico** se actualiza con el valor 01. Ya diagnosticada (por defecto, dicha columna aparece con el valor 00. Pdte diagnóstico), lo que permitirá conocer el grado de avance del diagnóstico.
+*   La columna **Plan de Adaptación** se actualiza con un valor que servirá para diseñar el Plan de Adaptación de cada sistema, en base a la siguiente relación:
+
+**RELACIÓN ENTRE LOS NIVELES DE MADUREZ Y EL PLAN DE ADAPTACIÓN A REALIZAR**
+
+| Nivel de madurez                     | Plan de adaptación                |
+| :----------------------------------- | :-------------------------------- |
+| L1. No documentada ni implementada   | 01. Documentar e implementar      |
+| L2. Documentación en curso y no implementada | 01. Documentar e implementar      |
+| L3. Documentada y no implementada    | 02. Implementar                   |
+| L4. Documentada e Implementación en curso | 02. Implementar                   |
+| L5. Documentada e Implementada       | 03. Adaptación completa           |
+| L6. No documentada e Implementada    | 04. Documentar                    |
+| L7. Documentación en curso e Implementada | 04. Documentar                    |
+| L8. Medida no necesaria en mi sistema | 05. Ninguna adaptación requerida  |
+
+### 3.7 Medidas Adicionales (MA). [Operativa]
+
+A partir de esta pestaña, junto a las dos siguientes, el autodiagnóstico consiste en la información de las entidades acerca de medidas que ellas mismas proponen como posibles para el cumplimiento del RIA y de las que la SEDIA evalúa su idoneidad.
+
+Esta pestaña aparece **sin informar**, con el objetivo de que la entidad indique las medidas que, en su experiencia, permiten el cumplimiento de apartados del artículo.
+
+Para ello deberá agregar una fila por cada una de dichas medidas, indicando la siguiente información:
+
+*   **Descripción breve**: una descripción identificativa de la medida. Se recomienda utilizar la **misma concreción** que la utilizada en las Medias Guías (MG).
+*   **Nombre del archivo**: donde dicha medida será detallada por la entidad. Cuando este campo se informe, la columna “Medida adicional documentada” automáticamente se actualizará con el valor “01. Ya aportada” (por defecto, al estar el campo en blanco aparecerá con el valor “00. Pendiente de aportar”).
+
+Las medidas adicionales deben ser validadas por la institución correspondiente (la SEDIA en el caso del sandbox), que informará las siguientes columnas:
+
+*   **Evaluación SEDIA. Estado**, que incluye los siguientes valores:
+    *   00. Evaluación Medida Adicional SEDIA. Pendiente, para cuando la medida esté pendiente de valorar por la SEDIA.
+    *   01. Evaluación Medida Adicional SEDIA. OK., cuando la SEDIA haya dado su OK a la medida. Esto supondrá un éxito para la entidad, ya que habrá aportado una medida hasta el momento no identificada que permitirá su aplicación en España y Europa.
+    *   02. Evaluación Medida Adicional SEDIA. NO_OK, para cuando la SEDIA rechace la medida tras, además de utilizar el criterio de sus expertos internos, haya recurrido a expertos y entidades externas para su evaluación.
+*   **Evaluación SEDIA. Comentarios**, donde la SEDIA incluye comentarios adicionales a cualquiera de los tres estados mencionados anteriormente.
+
+**MEDIDAS ADICIONALES DE PRUEBA**
+
+| ID Medida | Descripción breve         | Nombre del archivo donde se describe la medida (plantilla en enlace) | Medida adicional documentada | Evaluación SEDIA. Estado | Evaluación SEDIA. Comentarios |
+| :-------- | :------------------------ | :------------------------------------------------------------------- | :-------------------------- | :----------------------- | :---------------------------- |
+| MA01      | Medida adicional prueba1  | Detalle de medida adicional prueba1                                  | 01. Ya aportada             |                          |                               |
+| MA02      | Medida adicional prueba2  | Detalle de medida adicional prueba2                                  | 01. Ya aportada             |                          |                               |
+| MA03      | Medida adicional prueba3  | Detalle de medida adicional prueba2                                  | 01. Ya aportada             |                          |                               |
+|           |                           |                                                                      | 00. Pendiente de aportar    |                          |                               |
+|           |                           |                                                                      | 00. Pendiente de aportar    |                          |                               |
+
+### 3.8 Relación MA-Apart. [Operativa]
+
+Permite resumir de **manera ejecutiva la potencial aplicación** de las medidas informadas en la pestaña anterior a cada uno de los apartados del artículo.
+
+Los identificadores de las medidas aportadas en dicha pestaña anterior aparecen **automáticamente** en las columnas superiores.
+
+Únicamente es necesario marcar con una **X (mayúscula)** a qué apartado del artículo aplica cada medida.
+
+**RELACIÓN DE PRUEBA DE LAS MEDIDAS ADICIONALES APORTADAS EN LA PESTAÑA ANTERIOR CON LOS APARTADOS**
+
+| Apartados                                           | Medidas Adicionales |
+| :-------------------------------------------------- | :------------------ |
+|                                                     | MA01 MA02 MA03      |
+| 13.1. Diseño y desarrollo                           | X    X    X         |
+| 13.2. Instrucciones de uso                          | X    X              |
+| 13.3. Información específica                        | X                   |
+| 13.3.a. Información específica. Contacto            |                     |
+| 13.3.b. Información específica. Características     | X                   |
+| 13.3.b.i. Información específica. Características. Finalidad | X    X              |
+| 13.3.b.ii. Información específica. Características. Nivel de precisión | X    X              |
+| 13.3.b.iii. Información específica. Características. Riesgos por usos no previstos | X    X              |
+| 13.3.b.iv. Información específica. Características. Explicación de sus resultados de salida | X    X              |
+| 13.3.b.v. Información específica. Características. Impacto en personas y colectivos | X    X              |
+| 13.3.b.vi. Información específica. Características. Datos de entrada | X    X              |
+| 13.3.b.vii. Información específica. Características. Información de salida | X    X              |
+| 13.3.c. Información específica. Cambios             |                     |
+| 13.3.d. Información específica. Vigilancia humana   | X                   |
+| 13.3.e. Información específica. Recursos HW/SW y mantenimiento |                     |
+| 13.3.f. Información específica. Archivos de registro |                     |
+
+### 3.9 Autoeval MA. [Operativa]
+
+Este es el último paso. La pestaña aparece automáticamente **pre-informada** con una fila por cada una de las relaciones descritas en la pestaña anterior. Al igual que en la pestaña "Autoeval MG", para cada relación se **han de informar únicamente dos columnas**: "Nivel de dificultad percibido" y "Nivel de madurez". Las columnas "Estado Diagnóstico", y "Plan de adaptación" se actualizan **automáticamente** al informar las dos anteriores columnas de igual manera que en la pestaña "Autoeval MG" descrita anteriormente.
+
+**AUTOEVALUACIÓN DE PRUEBA DE LAS MEDIDAS ADICIONALES APORTADAS EN LA PESTAÑA ANTERIOR CON LOS APARTADOS**
+
+| Apartado | Breve descripción apartado | IDMedida | Descripción medida       | Nivel de dificultad percibido | Nivel de madurez | Estado Diagnóstico  | Plan de adaptación         |
+| :------- | :------------------------- | :------- | :----------------------- | :-------------------------- | :--------------- | :------------------ | :------------------------- |
+| 13.1.    | Diseño y desarrollo        | MA01     | Medida adicional prueba1 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.1.    | Diseño y desarrollo        | MA02     | Medida adicional prueba2 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.1.    | Diseño y desarrollo        | MA03     | Medida adicional prueba3 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.2.    | Instrucciones de uso       | MA01     | Medida adicional prueba1 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.2.    | Instrucciones de uso       | MA02     | Medida adicional prueba2 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.a.  | Información específica. Contacto | MA03     | Medida adicional prueba3 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.i. | Información específica. Características. Finalidad | MA02     | Medida adicional prueba2 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.i. | Información específica. Características. Finalidad | MA03     | Medida adicional prueba3 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.ii. | Información específica. Características. Nivel de precisión | MA02     | Medida adicional prueba2 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.ii. | Información específica. Características. Nivel de precisión | MA03     | Medida adicional prueba3 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.iii. | Información específica. Características. Riesgos por usos no previstos | MA02     | Medida adicional prueba2 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.iii. | Información específica. Características. Riesgos por usos no previstos | MA03     | Medida adicional prueba3 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.v. | Información específica. Características. Impacto en personas y colectivos | MA02     | Medida adicional prueba2 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.v. | Información específica. Características. Impacto en personas y colectivos | MA03     | Medida adicional prueba3 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.vi. | Información específica. Características. Datos de entrada | MA02     | Medida adicional prueba2 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.b.vi. | Información específica. Características. Datos de entrada | MA03     | Medida adicional prueba3 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+| 13.3.d.  | Información específica. Vigilancia humana | MA01     | Medida adicional prueba1 |                             |                  | 00. Pdte diagnóstico | Pendiente de evaluación    |
+
+## 4. Conclusión
+
+La herramienta de checklist permite que las entidades realicen de manera sencilla el **autodiagnóstico** de su sistema conforme a las medidas propuestas para el cumplimiento de los requisitos del RIA, que están recogidas en las guías de modo más exhaustivo.
+
+Esto permitirá que las empresas diseñen un plan de trabajo (Plan de Adaptación) que les facilite la planificación del desarrollo de las medidas que apliquen a sus sistemas, así como la elaboración de la documentación técnica a la que obliga el RIA.
