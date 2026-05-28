@@ -1,7 +1,27 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import { appName, gitConfig } from './shared';
 
-export function baseOptions(): BaseLayoutProps {
+const primaryLinks: NonNullable<BaseLayoutProps['links']> = [
+  {
+    text: 'Documentación',
+    url: '/docs',
+    active: 'nested-url',
+  },
+  {
+    text: 'Resumen',
+    url: '/docs/summary',
+  },
+  {
+    text: 'Recursos',
+    url: '/docs/resources/checklists-and-examples',
+  },
+  {
+    text: 'Fuentes oficiales',
+    url: '/docs/official-sources',
+  },
+];
+
+export function baseOptions({ includeLinks = true }: { includeLinks?: boolean } = {}): BaseLayoutProps {
   return {
     nav: {
       title: (
@@ -16,25 +36,7 @@ export function baseOptions(): BaseLayoutProps {
         </span>
       ),
     },
-    links: [
-      {
-        text: 'Documentación',
-        url: '/docs',
-        active: 'nested-url',
-      },
-      {
-        text: 'Resumen',
-        url: '/docs/summary',
-      },
-      {
-        text: 'Recursos',
-        url: '/docs/resources/checklists-and-examples',
-      },
-      {
-        text: 'Fuentes oficiales',
-        url: '/docs/official-sources',
-      },
-    ],
+    links: includeLinks ? primaryLinks : [],
     searchToggle: {
       enabled: false,
     },
