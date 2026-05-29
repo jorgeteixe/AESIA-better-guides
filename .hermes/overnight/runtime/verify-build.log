@@ -1,0 +1,30 @@
+
+> fumadocs-ui-template@0.0.0 build
+> next build
+
+[MDX] generated files in 18.56539799999996ms
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 13.8s
+  Running TypeScript ...
+  Finished TypeScript in 3.6s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/75) ...
+Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
+Error occurred prerendering page "/docs/resources/checklists-and-examples". Read more: https://nextjs.org/docs/messages/prerender-error
+Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it.
+  {SearchDialog: function LoadableComponent}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    at stringify (<anonymous>) {
+  digest: '3625683633'
+}
+Export encountered an error on /_not-found/page: /_not-found, exiting the build.
+Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it.
+  {SearchDialog: function LoadableComponent}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    at stringify (<anonymous>) {
+  digest: '3625683633'
+}
+Export encountered an error on /docs/[[...slug]]/page: /docs/resources/checklists-and-examples, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null

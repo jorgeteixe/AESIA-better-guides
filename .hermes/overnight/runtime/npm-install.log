@@ -1,0 +1,20 @@
+
+> fumadocs-ui-template@0.0.0 postinstall
+> fumadocs-mdx
+
+[MDX] generated files in 16.738992999999994ms
+
+added 5 packages, and audited 292 packages in 8s
+
+144 packages are looking for funding
+  run `npm fund` for details
+
+5 moderate severity vulnerabilities
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.

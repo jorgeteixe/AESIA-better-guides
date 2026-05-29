@@ -98,3 +98,54 @@ Route (app)
 ○  (Static)  prerendered as static content
 ●  (SSG)     prerendered as static HTML (uses generateStaticParams)
 
+
+> fumadocs-ui-template@0.0.0 build
+> next build
+
+[MDX] generated files in 44.20454799999993ms
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 13.7s
+  Running TypeScript ...
+  Finished TypeScript in 4.2s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/75) ...
+  Generating static pages using 3 workers (18/75) 
+  Generating static pages using 3 workers (37/75) 
+  Generating static pages using 3 workers (56/75) 
+✓ Generating static pages using 3 workers (75/75) in 2.4s
+  Finalizing page optimization ...
+⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
+This command is meant for static-only hosts, and is not necessary to make your application static.
+Pages in your application without server-side data dependencies will be automatically statically exported by `next build`, including pages powered by `getStaticProps`.
+Learn more: https://nextjs.org/docs/messages/api-routes-static-export
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ● /docs/[[...slug]]
+│ ├ /docs
+│ ├ /docs/introduction
+│ ├ /docs/itinerarios
+│ └ [+20 more paths]
+├ ○ /llms-full.txt
+├ ● /llms.mdx/docs/[[...slug]]
+│ ├ /llms.mdx/docs/content.md
+│ ├ /llms.mdx/docs/introduction/content.md
+│ ├ /llms.mdx/docs/itinerarios/content.md
+│ └ [+20 more paths]
+├ ○ /llms.txt
+├ ● /og/docs/[...slug]
+│ ├ /og/docs/image.png
+│ ├ /og/docs/introduction/image.png
+│ ├ /og/docs/itinerarios/image.png
+│ └ [+20 more paths]
+└ ○ /static.json
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
