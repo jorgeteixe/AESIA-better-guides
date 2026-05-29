@@ -3,6 +3,7 @@ import { createMDX } from 'fumadocs-mdx/next';
 const withMDX = createMDX();
 const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
 const repoName = 'AESIA-better-guides';
+const basePath = isGithubPages ? `/${repoName}` : '';
 
 /** @type {import('next').NextConfig} */
 const config = {
@@ -12,8 +13,11 @@ const config = {
   images: {
     unoptimized: true,
   },
-  basePath: isGithubPages ? `/${repoName}` : '',
-  assetPrefix: isGithubPages ? `/${repoName}/` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
+  basePath,
+  assetPrefix: isGithubPages ? `${basePath}/` : undefined,
 };
 
 export default withMDX(config);

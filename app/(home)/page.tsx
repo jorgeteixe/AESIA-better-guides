@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { siteDescription } from '@/lib/shared';
 
 export const metadata: Metadata = {
-  title: 'Guías AESIA · Portal documental del Reglamento Europeo de IA',
-  description:
-    'Portal documental en español para navegar las 16 guías de supervisión de la AESIA sobre el Reglamento Europeo de Inteligencia Artificial.',
+  title: 'Portal documental del Reglamento Europeo de IA',
+  description: siteDescription,
 };
 
 const corpusMap = [
@@ -202,11 +202,12 @@ export default function HomePage() {
                 2
               </span>
               <div>
-                <Link href="/docs/introduction" className="font-medium underline-offset-4 hover:underline">
-                  Introducción
+                <Link href="/docs/itinerarios" className="font-medium underline-offset-4 hover:underline">
+                  Itinerarios por perfil
                 </Link>
                 <p className="mt-0.5 text-fd-muted-foreground">
-                  Qué cubre el portal, a quién va dirigido y cómo está organizado.
+                  Si ya sabes tu rol, ve directo a la secuencia de guías que toca en tu caso: proveedor, desplegador,
+                  administración o transparencia.
                 </p>
               </div>
             </li>

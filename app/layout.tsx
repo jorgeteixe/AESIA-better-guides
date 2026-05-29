@@ -2,9 +2,36 @@ import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
+import { appName, absoluteUrl, siteDescription, siteUrl } from '@/lib/shared';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jorgeteixe.github.io/AESIA-better-guides/'),
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: appName,
+    template: `%s · ${appName}`,
+  },
+  description: siteDescription,
+  openGraph: {
+    type: 'website',
+    locale: 'es_ES',
+    siteName: appName,
+    title: appName,
+    description: siteDescription,
+    images: [
+      {
+        url: absoluteUrl('/og/site'),
+        width: 1200,
+        height: 630,
+        alt: `${appName} · Portal documental del Reglamento Europeo de IA`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: appName,
+    description: siteDescription,
+    images: [absoluteUrl('/og/site')],
+  },
 };
 
 const inter = Inter({

@@ -19,16 +19,16 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   if (!page) notFound();
 
   const MDX = page.data.body;
-  const markdownUrl = getPageMarkdownUrl(page).url;
+  const markdown = getPageMarkdownUrl(page);
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
-        <MarkdownCopyButton markdownUrl={markdownUrl} />
+        <MarkdownCopyButton markdownUrl={markdown.path} />
         <ViewOptionsPopover
-          markdownUrl={markdownUrl}
+          markdownUrl={markdown.url}
           githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/docs/${page.path}`}
         />
       </div>
@@ -53,11 +53,29 @@ export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): P
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  const image = getPageImage(page);
+
   return {
     title: page.data.title,
     description: page.data.description,
     openGraph: {
-      images: getPageImage(page).url,
+      title: page.data.title,
+      description: page.data.description,
+      type: 'article',
+      images: [
+        {
+          url: image.url,
+          width: 1200,
+          height: 630,
+          alt: `${page.data.title} · Guías AESIA`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.data.title,
+      description: page.data.description,
+      images: [image.url],
     },
   };
 }
