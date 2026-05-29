@@ -1,0 +1,6 @@
+Read /home/hermes/AESIA-better-guides/.hermes/overnight/goal-prompt.md and /home/hermes/AESIA-better-guides/.hermes/overnight/progress.md first.
+
+Then execute one autonomous improvement pass on this repository. Research externally if useful, implement the best safe improvement you can find, validate locally with npm run build, update the progress log, and finish with a concise machine-readable summary using sections exactly named:
+SUMMARY:
+VALIDATION:
+NEXT_IDEA:
