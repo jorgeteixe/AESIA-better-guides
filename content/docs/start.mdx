@@ -1,0 +1,233 @@
+---
+title: Punto de partida
+description: Orientación guiada para saber si el Reglamento de IA te aplica, en qué nivel de riesgo encaja tu sistema, qué rol ocupas y por dónde empezar.
+---
+
+Antes de leer ninguna guía técnica conviene responder a cuatro preguntas: **¿el Reglamento me aplica?**, **¿en qué nivel de riesgo encaja mi sistema?**, **¿qué rol ocupo?** y **¿para cuándo?**. Esta página te lleva por esas preguntas en orden y, al final, te deja en la secuencia de guías que corresponde a tu caso.
+
+<Callout title="Cómo usar esta página" type="info">
+  Es una orientación práctica, **no una calificación jurídica**. Te ayuda a situarte y a no leer las 16 guías a ciegas. La
+  clasificación formal de un sistema concreto debe contrastarse con la [Guía 01](/docs/guides/01-guia-introductoria-al-reglamento-de-ia),
+  el texto legal y las [fuentes oficiales](/docs/official-sources).
+</Callout>
+
+## Recorrido en cuatro pasos
+
+<Steps>
+
+<Step>
+
+### Paso 1 · ¿Es un «sistema de IA» y entra en el ámbito del Reglamento?
+
+El Reglamento regula **casos de uso, no la tecnología en sí**. Antes de nada, comprueba dos cosas: que lo que tienes encaja en la definición de sistema de IA y que no cae en una exclusión.
+
+**Quedan fuera del ámbito (Art. 2), entre otros:**
+
+- **Investigación y desarrollo** previos a la introducción en el mercado (las pruebas en condiciones reales sí están cubiertas).
+- **Fines militares, de defensa o seguridad nacional**, con independencia de quién los use.
+- **Software libre o de código abierto**, salvo que se comercialice como alto riesgo o con obligaciones de transparencia, o se destine a usos prohibidos.
+- **Uso personal no profesional** por personas físicas.
+
+<Callout title="¿Modelos de propósito general (GPAI)?" type="info">
+  Si desarrollas o integras un **modelo de IA de uso general** (GPAI), tienes un régimen propio (transparencia,
+  documentación técnica, derechos de autor y, para modelos con riesgo sistémico, evaluación y gestión de riesgos). Según
+  el uso final en que se integre, el sistema resultante puede acabar siendo de alto riesgo o incluso prohibido.
+</Callout>
+
+**Si tu sistema no encaja en la definición o cae en una exclusión:** probablemente no necesitas el resto del recorrido; mantén, eso sí, la **alfabetización en IA** del personal (Art. 4). **Si encaja:** continúa al Paso 2.
+
+</Step>
+
+<Step>
+
+### Paso 2 · ¿Es una práctica prohibida?
+
+Antes de pensar en obligaciones, descarta que el uso esté **prohibido** (Art. 5). Estas prácticas no se pueden poner en el mercado bajo ninguna condición y su prohibición se aplica **desde el 2 de febrero de 2025**.
+
+<Accordions>
+<Accordion title="Prácticas prohibidas más relevantes (Art. 5)">
+
+- **Manipulación subliminal** del comportamiento que pueda causar daño físico o psicológico.
+- **Explotación de vulnerabilidades** de grupos por edad, discapacidad o situación social.
+- **Puntuación social** (social scoring) que perjudique a personas de forma desproporcionada o en contextos ajenos a los datos.
+- **Identificación biométrica remota «en tiempo real»** en espacios públicos por parte de autoridades policiales, salvo casos tasados y con autorización.
+
+La Comisión Europea ha publicado *directrices sobre prácticas de IA prohibidas* para aclarar casos límite.
+
+</Accordion>
+</Accordions>
+
+**Si encaja en una práctica prohibida:** el camino no es «cumplir requisitos», es **no desplegar ese uso**. **Si no encaja:** continúa al Paso 3.
+
+</Step>
+
+<Step>
+
+### Paso 3 · ¿Es de alto riesgo?
+
+Aquí se concentra la **mayoría de obligaciones** del Reglamento. Un sistema es de alto riesgo por dos vías independientes (Art. 6).
+
+<Accordions>
+<Accordion title="Vía A · Componente de seguridad de un producto regulado (Anexo I)">
+
+Tu sistema de IA es **un producto, o el componente de seguridad de un producto**, ya cubierto por legislación de armonización de la UE y sujeto a evaluación de conformidad por un tercero.
+
+Ejemplos del Anexo I: máquinas, juguetes, ascensores, equipos radioeléctricos, equipos a presión, embarcaciones de recreo, **productos sanitarios y de diagnóstico in vitro**, automoción y aviación.
+
+En este caso, la conformidad del sistema de IA se integra en la del producto y, normalmente, la fecha de aplicación es **2 de agosto de 2027**.
+
+</Accordion>
+<Accordion title="Vía B · Finalidad de alto riesgo (Anexo III)">
+
+Tu sistema se usa para una de estas **finalidades sensibles** para la salud, la seguridad o los derechos fundamentales:
+
+- **Biometría** (identificación, categorización, reconocimiento de emociones).
+- **Infraestructuras críticas**.
+- **Educación y formación profesional**.
+- **Empleo y gestión de trabajadores** (selección, promoción, evaluación).
+- **Acceso a servicios esenciales** públicos y privados (incl. *scoring* crediticio y seguros).
+- **Garantía del cumplimiento del Derecho** (uso policial).
+- **Migración, asilo y control fronterizo**.
+- **Administración de justicia y procesos democráticos**.
+
+Para el Anexo III, la fecha general de aplicación es **2 de agosto de 2026**.
+
+</Accordion>
+</Accordions>
+
+**Si es de alto riesgo:** te aplican prácticamente todas las guías técnicas (03 — 15). Sigue tu ruta en [«Tu ruta según el resultado»](#tu-ruta-según-el-resultado). **Si no lo es:** continúa al Paso 4 para descartar obligaciones de transparencia.
+
+</Step>
+
+<Step>
+
+### Paso 4 · ¿Tiene obligaciones de transparencia?
+
+Aunque no sea de alto riesgo, ciertos sistemas deben **avisar de que detrás hay IA** (Art. 50):
+
+- Sistemas que **interactúan con personas** (p. ej. *chatbots*): hay que informar de que se habla con una IA.
+- **Contenido sintético** (texto, imagen, audio, vídeo): debe marcarse como generado o manipulado por IA.
+- ***Deepfakes*** y textos de interés público generados por IA: deben divulgarse como tales.
+- **Reconocimiento de emociones o categorización biométrica**: hay que informar a las personas expuestas.
+
+Estas obligaciones también aplican, de forma acumulativa, a los sistemas de alto riesgo que además generen este tipo de salidas.
+
+**Continúa al Paso 5** para fijar tu rol, que determina *quién* responde de cada obligación.
+
+</Step>
+
+<Step>
+
+### Paso 5 · ¿Cuál es tu rol en la cadena de valor?
+
+Las obligaciones cambian según el **operador** que seas (Art. 3). Identifícalo antes de repartir tareas.
+
+| Rol | En una frase |
+| --- | --- |
+| **Proveedor** | Desarrolla el sistema (o lo manda desarrollar) y lo pone en el mercado bajo su nombre o marca. **Asume la mayoría de obligaciones.** |
+| **Responsable del despliegue** | Usa el sistema bajo su autoridad en un contexto profesional. |
+| **Importador / Distribuidor** | Introduce o comercializa en la UE un sistema de un tercero. |
+| **Representante autorizado** | Actúa en la UE por mandato escrito de un proveedor de fuera de la Unión. |
+
+<Callout title="Cuidado: un desplegador puede convertirse en proveedor" type="warning">
+  Pasas a asumir obligaciones de **proveedor** de un sistema de alto riesgo si **pones tu nombre o marca** sobre él, si
+  haces una **modificación sustancial**, o si **cambias su finalidad prevista** de modo que pase a ser de alto riesgo. La
+  **finalidad prevista** es, por eso, el concepto más crítico del Reglamento.
+</Callout>
+
+<Callout title="Si eres administración o sector público" type="info">
+  Además de lo anterior, los responsables del despliegue del sector público (y algunos privados) deben realizar una
+  **Evaluación de Impacto en los Derechos Fundamentales (EIDF/FRIA)** antes de desplegar un sistema de alto riesgo.
+</Callout>
+
+</Step>
+
+</Steps>
+
+## Tu ruta según el resultado
+
+Localiza el caso que más se parezca al tuyo. Cada ruta abre un [itinerario por perfil](/docs/itinerarios): la secuencia de guías ordenada por fases, con lo que aporta cada paso.
+
+<Cards>
+  <Card title="Práctica prohibida" href="/docs/guides/01-guia-introductoria-al-reglamento-de-ia">
+    No es un problema de cumplimiento: el uso no está permitido. Confirma la clasificación en la Guía 01 (niveles de riesgo) y con las fuentes oficiales antes de descartar el proyecto.
+  </Card>
+  <Card title="Alto riesgo · eres proveedor" href="/docs/itinerarios#proveedor-de-alto-riesgo">
+    Tu caso central. El itinerario te lleva de la clasificación al expediente de conformidad: SGC (04), riesgos (05), Anexo IV (15) y los controles técnicos, fase a fase.
+  </Card>
+  <Card title="Alto riesgo · eres desplegador" href="/docs/itinerarios#responsable-del-despliegue-de-alto-riesgo">
+    Menos obligaciones, pero críticas: instrucciones de uso (08), supervisión humana (06) y vigilancia en producción (13, 12, 14). Comprueba si alguna acción tuya te convierte en proveedor.
+  </Card>
+  <Card title="Alto riesgo · administración pública" href="/docs/itinerarios#administración-y-sector-público">
+    El itinerario del desplegador más la Evaluación de Impacto en los Derechos Fundamentales (EIDF/FRIA) antes de poner el sistema en servicio.
+  </Card>
+  <Card title="Solo obligaciones de transparencia" href="/docs/itinerarios#solo-obligaciones-de-transparencia">
+    No es alto riesgo, pero hay que avisar de la presencia de IA y etiquetar contenido sintético. La Guía 08 desarrolla cómo hacerlo bien.
+  </Card>
+  <Card title="Riesgo mínimo" href="/docs/itinerarios#riesgo-mínimo">
+    Sin obligaciones específicas más allá de promover la alfabetización en IA del personal (Art. 4). La Guía 01 lo explica.
+  </Card>
+  <Card title="Aún no lo tengo claro" href="/docs/guides/02-guia-practica-y-ejemplos-para-entender-el-reglamento-de-ia">
+    La Guía 02 aterriza el Reglamento con casos de uso y un glosario; combinada con la Guía 01 resuelve la mayoría de dudas de clasificación.
+  </Card>
+</Cards>
+
+## ¿Para cuándo? Calendario de aplicación
+
+El Reglamento (UE) 2024/1689 entró en vigor el **1 de agosto de 2024**, pero sus obligaciones se activan de forma **escalonada** (Art. 113). Estas son las fechas clave del propio Reglamento:
+
+<Steps>
+
+<Step>
+
+### 2 de febrero de 2025 · Prohibiciones y alfabetización
+
+Aplican las disposiciones generales (Cap. I) y las **prácticas prohibidas** (Art. 5), además del deber de **alfabetización en IA** (Art. 4).
+
+</Step>
+
+<Step>
+
+### 2 de agosto de 2025 · Modelos de uso general (GPAI) y gobernanza
+
+Aplican las obligaciones de los **modelos GPAI**, la **gobernanza** y el grueso del régimen sancionador. Los modelos GPAI ya en el mercado antes de esta fecha tienen hasta el **2 de agosto de 2027** para adaptarse.
+
+</Step>
+
+<Step>
+
+### 2 de agosto de 2026 · Alto riesgo del Anexo III
+
+Aplica el **grueso de las obligaciones de alto riesgo** para sistemas con finalidades del **Anexo III** (empleo, biometría, servicios esenciales, etc.) y las obligaciones de transparencia del Art. 50.
+
+</Step>
+
+<Step>
+
+### 2 de agosto de 2027 · Alto riesgo del Anexo I
+
+Aplican las obligaciones de alto riesgo para los sistemas que son **producto o componente de seguridad de productos regulados** (Anexo I).
+
+</Step>
+
+</Steps>
+
+<Callout title="Sistemas heredados y sector público" type="info">
+  Los sistemas ya en el mercado antes de su fecha de aplicación tienen reglas de transición específicas (y plazos
+  propios para el sector público). La [Guía 01](/docs/guides/01-guia-introductoria-al-reglamento-de-ia#34-fechas-de-activación-de-las-obligaciones)
+  recoge la tabla detallada por tipo de sistema; para casos concretos, consulta las [fuentes oficiales](/docs/official-sources).
+</Callout>
+
+## Siguientes pasos
+
+<Cards>
+  <Card title="Profundiza en la clasificación" href="/docs/guides/01-guia-introductoria-al-reglamento-de-ia">
+    Niveles de riesgo, roles y gobernanza, con todo el detalle del marco.
+  </Card>
+  <Card title="Lee el resumen profundo" href="/docs/summary">
+    Las 16 guías conectadas y el orden de lectura recomendado para un proyecto real.
+  </Card>
+  <Card title="Pasa a lo operativo" href="/docs/resources/checklists-and-examples">
+    Checklists y ejemplos oficiales de AESIA para autodiagnóstico y evidencias.
+  </Card>
+</Cards>
