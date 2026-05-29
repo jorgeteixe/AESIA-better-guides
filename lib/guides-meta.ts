@@ -8,6 +8,12 @@
 
 export type Capa = 'Conocer' | 'Implementar' | 'Autodiagnosticar';
 
+/**
+ * Rol de operador al que concierne una guía, para filtrar la vista de conjunto.
+ * `todos` marca las guías de marco/diagnóstico relevantes para cualquier perfil.
+ */
+export type RolGuia = 'todos' | 'proveedor' | 'desplegador';
+
 export type GuiaMeta = {
   /** Número de guía con dos dígitos, p. ej. "05". */
   n: string;
@@ -29,6 +35,11 @@ export type GuiaMeta = {
   cuando: string;
   /** Números de las guías directamente relacionadas. */
   relacionadas: string[];
+  /**
+   * Roles de operador a los que concierne la guía. Se derivan del campo `rol`
+   * (texto): no añaden afirmaciones nuevas, solo lo estructuran para filtrar.
+   */
+  roles: RolGuia[];
 };
 
 export const guias: GuiaMeta[] = [
@@ -43,6 +54,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Todos los operadores',
     cuando: 'Primera lectura para cualquier equipo que inicia un proyecto de cumplimiento.',
     relacionadas: ['02', '16'],
+    roles: ['todos'],
   },
   {
     n: '02',
@@ -55,6 +67,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Todos los operadores',
     cuando: 'En paralelo o justo después de la Guía 01; como consulta puntual de definiciones.',
     relacionadas: ['01', '16'],
+    roles: ['todos'],
   },
   {
     n: '03',
@@ -67,6 +80,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor',
     cuando: 'Antes de lanzar al mercado, tras una modificación sustancial o al heredar un sistema.',
     relacionadas: ['04', '15'],
+    roles: ['proveedor'],
   },
   {
     n: '04',
@@ -79,6 +93,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor',
     cuando: 'En paralelo con la Guía 05: es el marco organizativo que contiene a los demás requisitos.',
     relacionadas: ['05', '15'],
+    roles: ['proveedor'],
   },
   {
     n: '05',
@@ -91,6 +106,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor',
     cuando: 'Desde el diseño y como revisión obligatoria antes del lanzamiento y tras incidentes.',
     relacionadas: ['04', '07'],
+    roles: ['proveedor'],
   },
   {
     n: '06',
@@ -103,6 +119,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor (diseño) · responsable del despliegue (uso)',
     cuando: 'Durante el diseño y al definir los procedimientos operativos del responsable del despliegue.',
     relacionadas: ['08', '12'],
+    roles: ['proveedor', 'desplegador'],
   },
   {
     n: '07',
@@ -115,6 +132,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor · responsable del despliegue (si controla los datos de entrada)',
     cuando: 'Desde el inicio y de forma continua durante entrenamiento y reentrenamiento.',
     relacionadas: ['05', '09'],
+    roles: ['proveedor', 'desplegador'],
   },
   {
     n: '08',
@@ -127,6 +145,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor (elabora) · responsable del despliegue (aplica)',
     cuando: 'Desde el diseño y antes de la puesta en el mercado.',
     relacionadas: ['06', '15'],
+    roles: ['proveedor', 'desplegador'],
   },
   {
     n: '09',
@@ -139,6 +158,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor',
     cuando: 'Durante entrenamiento, validación y documentación técnica.',
     relacionadas: ['10', '07'],
+    roles: ['proveedor'],
   },
   {
     n: '10',
@@ -151,6 +171,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor',
     cuando: 'En diseño, en pruebas y al definir el plan de vigilancia poscomercialización.',
     relacionadas: ['09', '13'],
+    roles: ['proveedor'],
   },
   {
     n: '11',
@@ -163,6 +184,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor · responsable del despliegue',
     cuando: 'En el diseño de arquitectura y en revisiones antes del despliegue o de cambios de infraestructura.',
     relacionadas: ['10', '12'],
+    roles: ['proveedor', 'desplegador'],
   },
   {
     n: '12',
@@ -175,6 +197,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor · responsable del despliegue',
     cuando: 'En el diseño de arquitectura y al redactar la documentación técnica.',
     relacionadas: ['13', '14'],
+    roles: ['proveedor', 'desplegador'],
   },
   {
     n: '13',
@@ -187,6 +210,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor (plan) · responsable del despliegue (seguimiento)',
     cuando: 'Antes del despliegue y durante toda la operación continua.',
     relacionadas: ['14', '05'],
+    roles: ['proveedor', 'desplegador'],
   },
   {
     n: '14',
@@ -199,6 +223,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor (notifica) · responsable del despliegue (procedimiento subsidiario)',
     cuando: 'Al diseñar procesos operativos y como consulta inmediata ante eventos potencialmente graves.',
     relacionadas: ['13', '04'],
+    roles: ['proveedor', 'desplegador'],
   },
   {
     n: '15',
@@ -211,6 +236,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Proveedor',
     cuando: 'Como checklist permanente durante el desarrollo y como plantilla del expediente de conformidad.',
     relacionadas: ['03', '04'],
+    roles: ['proveedor'],
   },
   {
     n: '16',
@@ -223,6 +249,7 @@ export const guias: GuiaMeta[] = [
     rol: 'Todos los operadores',
     cuando: 'En el diagnóstico inicial, en revisiones periódicas y en auditorías internas.',
     relacionadas: ['01', '03'],
+    roles: ['todos'],
   },
 ];
 
@@ -250,3 +277,39 @@ export const capas: { capa: Capa; descripcion: string }[] = [
     descripcion: 'Cómo usar las listas de control para autoevaluación y auditoría interna.',
   },
 ];
+
+export type FiltroRol = {
+  /** Valor del filtro; `todos` muestra el corpus completo. */
+  valor: RolGuia;
+  /** Etiqueta del botón de filtro. */
+  etiqueta: string;
+  /** Nota contextual que explica qué incluye la vista filtrada. */
+  nota: string;
+};
+
+/** Filtros de la vista de conjunto, por rol de operador en la cadena de valor. */
+export const filtrosRol: FiltroRol[] = [
+  {
+    valor: 'todos',
+    etiqueta: 'Todos los perfiles',
+    nota: 'Las 16 guías del corpus, agrupadas por capa.',
+  },
+  {
+    valor: 'proveedor',
+    etiqueta: 'Proveedor',
+    nota: 'El proveedor asume la mayoría de obligaciones de los sistemas de alto riesgo: todas las guías del corpus le resultan relevantes.',
+  },
+  {
+    valor: 'desplegador',
+    etiqueta: 'Responsable del despliegue',
+    nota: 'El responsable del despliegue se centra en el uso conforme: instrucciones de uso, supervisión humana, control de los datos de entrada y vigilancia en producción.',
+  },
+];
+
+/**
+ * ¿La guía concierne al rol seleccionado? Las guías de marco/diagnóstico
+ * (marcadas `todos`) se muestran con cualquier filtro.
+ */
+export function guiaCoincideRol(g: GuiaMeta, rol: RolGuia): boolean {
+  return rol === 'todos' || g.roles.includes('todos') || g.roles.includes(rol);
+}

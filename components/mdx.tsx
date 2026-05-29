@@ -3,6 +3,8 @@ import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import { Step, Steps } from 'fumadocs-ui/components/steps';
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import type { MDXComponents } from 'mdx/types';
+import { Calendario } from './calendario';
+import { Clasificador } from './clasificador';
 import { GuiaResumen } from './guia-resumen';
 import { GuiasIndice } from './guias-indice';
 
@@ -15,6 +17,8 @@ export function getMDXComponents(components?: MDXComponents) {
     Steps,
     Tab,
     Tabs,
+    Calendario,
+    Clasificador,
     GuiaResumen,
     GuiasIndice,
     ...components,
